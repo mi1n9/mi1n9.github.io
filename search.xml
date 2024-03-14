@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>2024BeginCTF Crypto--fake_N</title>
+    <url>/2024/03/14/2024BeginCTF-Crypto-fake-N/</url>
+    <content><![CDATA[<h1 id="FIRST"><a href="#FIRST" class="headerlink" title="FIRST"></a>FIRST</h1><p>首先分解fake_n,使用factordb.com，得到17个质因子</p>
+<p><img src="/pic/2024BeginCTF-Crypto-fake-N/factor.png" alt="factor"></p>
+<h1 id="second"><a href="#second" class="headerlink" title="second"></a>second</h1><p>阅读题目得真实的n为15个质因子的积，遍历17个质因子中15个的积作为真实的n，并求出phi，写出对应脚本为</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Cryptodome.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> sympy</span><br><span class="line">fake_n_list=[<span class="number">2215221821</span> , <span class="number">2290486867</span> , <span class="number">2333428577</span> , <span class="number">2361589081</span> , <span class="number">2446301969</span> , <span class="number">2507934301</span>, <span class="number">2590663067</span> ,<span class="number">3107210929</span> ,<span class="number">3278987191</span>,<span class="number">3389689241</span>,<span class="number">3417707929</span>,<span class="number">3429664037</span>,<span class="number">3716624207</span>, <span class="number">3859354699</span>, <span class="number">3965529989</span>, <span class="number">4098704749</span>, <span class="number">4267348123</span>]</span><br><span class="line">c = <span class="number">6451324417011540096371899193595274967584961629958072589442231753539333785715373417620914700292158431998640787575661170945478654203892533418902</span></span><br><span class="line">fake_n = <span class="number">1</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(fake_n_list)):</span><br><span class="line">    fake_n *= fake_n_list[i]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(fake_n_list)):</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(fake_n_list)):</span><br><span class="line">        n=fake_n//(fake_n_list[i]*fake_n_list[k])</span><br><span class="line">        phi=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> fake_n_list:</span><br><span class="line">            <span class="keyword">if</span>(j!=fake_n_list[i] <span class="keyword">and</span> j!=fake_n_list[k]):</span><br><span class="line">                phi=phi*(j-<span class="number">1</span>)</span><br><span class="line">        d=inverse(e,phi)</span><br><span class="line">        x=long_to_bytes(<span class="built_in">pow</span>(c,d,n))</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">b&#x27;begin&#x27;</span> <span class="keyword">in</span> x):</span><br><span class="line">            <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>得到结果为</p>
+<p>begin{y0u_f1nd_th3_re4l_n}</p>
+]]></content>
+      <categories>
+        <category>wp</category>
+      </categories>
+      <tags>
+        <tag>wp</tag>
+      </tags>
+  </entry>
+</search>
