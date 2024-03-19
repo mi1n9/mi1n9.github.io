@@ -303,6 +303,13 @@
 
       <time title="创建时间：2024-03-17 21:33:05" itemprop="dateCreated datePublished" datetime="2024-03-17T21:33:05+08:00">2024-03-17</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-03-19 17:16:04" itemprop="dateModified" datetime="2024-03-19T17:16:04+08:00">2024-03-19</time>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -311,14 +318,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -329,7 +336,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h1 id="RSA原理"><a href="#RSA原理" class="headerlink" title="RSA原理"></a>RSA原理</h1><h3 id="生成公私钥"><a href="#生成公私钥" class="headerlink" title="生成公私钥"></a>生成公私钥</h3><ol>
+<li><p>选取两个不同的大素数p，q，计算N&#x3D;p*q</p>
+</li>
+<li><p>求N的欧拉函数值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">φ(N)=φ(p)φ(q)=(p−1)(q−1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择一个小于 <em>φ</em>(<em>N</em>) 的整数 <em>e</em> ，并且满足 e* 和 φ*(<em>N</em>) <strong>互质</strong>，求得 e* 在模 <em>φ</em>(<em>N</em>) 意义下的<strong>乘法逆元</strong> <em>d</em> ，有 <em>e**d</em>≡1(mod<em>φ</em>(<em>N</em>))。</p>
+</li>
+<li><p>销毁 <em>p</em> 和 q</p>
+<h2 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h2><p>$$<br>c≡m<br>e<br> (modN)<br>$$</p>
+<h2 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h2><p>$$<br>m≡c<br>d<br> (modN)<br>$$</p>
+</li>
+</ol>
+<h1 id="基本题型"><a href="#基本题型" class="headerlink" title="基本题型"></a>基本题型</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">p = getPrime(<span class="number">512</span>)</span><br><span class="line">q = getPrime(<span class="number">512</span>)</span><br><span class="line">n = p*q</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line"></span><br><span class="line">c = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;p = <span class="subst">&#123;p&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;q = <span class="subst">&#123;q&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;e = <span class="subst">&#123;e&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c = <span class="subst">&#123;c&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">p = 10554915510546378513140074459658086644656654144905337809416976066414771647836950941616441505897207397834928781511863699153349798682451297889979721668885951</span></span><br><span class="line"><span class="string">q = 8246403321715011123191410826902524505032643184038566851264109473851746507405534573077909160292816825514872584170252311902322051822644609979417178306809223</span></span><br><span class="line"><span class="string">e = 65537</span></span><br><span class="line"><span class="string">c = 40005881669517895877352756665523238535105922590962714344556374248977905431683140065629966778249773228248201807844489945346731806741025157651474530811920115794270396320935022110691338083709019538562205165553541077855422953438117902279834449006455379382431883650004540282758907332683496655914597029545677184720</span></span><br></pre></td></tr></table></figure>
+
+<p>解密脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">p = <span class="number">10554915510546378513140074459658086644656654144905337809416976066414771647836950941616441505897207397834928781511863699153349798682451297889979721668885951</span></span><br><span class="line">q = <span class="number">8246403321715011123191410826902524505032643184038566851264109473851746507405534573077909160292816825514872584170252311902322051822644609979417178306809223</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="number">40005881669517895877352756665523238535105922590962714344556374248977905431683140065629966778249773228248201807844489945346731806741025157651474530811920115794270396320935022110691338083709019538562205165553541077855422953438117902279834449006455379382431883650004540282758907332683496655914597029545677184720</span></span><br><span class="line"></span><br><span class="line">n=p*q</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">m = <span class="built_in">pow</span>(c, d, n)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="延伸题型"><a href="#延伸题型" class="headerlink" title="延伸题型"></a>延伸题型</h1><p>待补充……</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
       
     </div>
 
@@ -467,13 +495,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">5 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
