@@ -86,4 +86,29 @@
         <tag>NOTE</tag>
       </tags>
   </entry>
+  <entry>
+    <title>相关数学基础知识</title>
+    <url>/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="Rabin攻击"><a href="#Rabin攻击" class="headerlink" title="Rabin攻击"></a>Rabin攻击</h1><p>首先引出二次剩余和欧拉准则，欧拉准则的证明又设计涉及费马小定理，下面一一说明。</p>
+<h2 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>若p为素数，gcd(a,p)&#x3D;1,则$a^{p}$≡a(modp),也可写为$a^{p-1}$≡1(modp).</p>
+<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><h2 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><ul>
+<li><p>若<em>p</em>是素数,a<em>不是p</em>的倍数且与一个平方数模p<em>同余,则称a</em>是模p<em>的二次剩余,记作</em>a<em>∈</em>QR</p>
+<p>例如$2^{2}$≡4(mod13) 则称4是模13的二次剩余</p>
+<p>同样我们把不等于0也不是模p<em>的二次剩余的数称为非二次剩余,记作a</em>∈<em>NR</em></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>NOTE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>XYCTF-crypto</title>
+    <url>/2024/04/28/XYCTF-crypto/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第一次打比赛，被新生赛狠狠拷打了QAQ</p>
+]]></content>
+      <tags>
+        <tag>wp</tag>
+      </tags>
+  </entry>
 </search>
