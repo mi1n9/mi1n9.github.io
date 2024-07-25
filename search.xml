@@ -26,7 +26,7 @@
 
 <p>做的时候一直卡在复数转实数上，想到了共轭复数但是没有去仔细研究。</p>
 <p>赛后看wp知道了定义<img src="/pic/XYCTF-crypto/image-20240428191957162-1719079099042.png" alt="image-20240428191957162"></p>
-<p>这样题目中的g和c都可以通过实部和虚部平方相加的方式转为实数再进行普通的dlp求解</p>
+<p>这样题目中的g和c都可以通过实部和虚部平方相加的方式转为实数再进行普通的dlp求解 </p>
 <p>exp：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Cryptodome.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> sympy.ntheory <span class="keyword">import</span> discrete_log</span><br><span class="line">p=<span class="number">1127236854942215744482170859284245684922507818478439319428888584898927520579579027</span></span><br><span class="line">g=<span class="number">58</span></span><br><span class="line">c=(<span class="number">5699996596230726507553778181714315375600519769517892864468100565238657988087817</span>**<span class="number">2</span>)+(<span class="number">198037503897625840198829901785272602849546728822078622977599179234202360717671908</span>**<span class="number">2</span>)</span><br><span class="line">flag=discrete_log(p,c,g)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(flag))</span><br></pre></td></tr></table></figure>
 
@@ -117,7 +117,10 @@
   <entry>
     <title>近期的一些summary</title>
     <url>/2024/06/27/%E8%BF%91%E6%9C%9F%E7%9A%84%E4%B8%80%E4%BA%9Bsummary/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1>]]></content>
+      <tags>
+        <tag>thinkabout</tag>
+      </tags>
   </entry>
   <entry>
     <title>相关数学基础知识</title>
