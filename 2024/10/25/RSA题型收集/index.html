@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="持续更新ing……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RSA题型收集">
+<meta property="og:url" content="http://example.com/2024/10/25/RSA%E9%A2%98%E5%9E%8B%E6%94%B6%E9%9B%86/index.html">
+<meta property="og:site_name" content="浮白载笔">
+<meta property="og:description" content="持续更新ing……">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-25T07:09:49.000Z">
+<meta property="article:modified_time" content="2024-10-28T18:39:51.610Z">
+<meta property="article:author" content="mi1n9">
+<meta property="article:tag" content="NOTE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/10/25/RSA%E9%A2%98%E5%9E%8B%E6%94%B6%E9%9B%86/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/10/25/RSA%E9%A2%98%E5%9E%8B%E6%94%B6%E9%9B%86/","path":"2024/10/25/RSA题型收集/","title":"RSA题型收集"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>RSA题型收集 | 浮白载笔</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?841f86b735a025664beab6e082daa3d3"></script>
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">浮白载笔</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">苍山负雪，明烛天南</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%EF%BC%8C%E7%BB%93%E5%BC%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">一，结式的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%8CNewStar-CTF-2024-%E5%AD%A6%E4%BB%A5%E8%87%B4%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">1，NewStar CTF 2024-学以致用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%EF%BC%8C%E5%A4%9A%E9%A1%B9%E5%BC%8FRSA"><span class="nav-number">2.</span> <span class="nav-text">二，多项式RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%8CCTFshow-unusualrsa3"><span class="nav-number">2.1.</span> <span class="nav-text">1，CTFshow-unusualrsa3</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="mi1n9"
+      src="/images/Image_1710243749806.jpg">
+  <p class="site-author-name" itemprop="name">mi1n9</p>
+  <div class="site-description" itemprop="description">夜将寒色去，年共晓光新</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1403921843&auto=1&height=66"></iframe>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/25/RSA%E9%A2%98%E5%9E%8B%E6%94%B6%E9%9B%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Image_1710243749806.jpg">
+      <meta itemprop="name" content="mi1n9">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮白载笔">
+      <meta itemprop="description" content="夜将寒色去，年共晓光新">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="RSA题型收集 | 浮白载笔">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RSA题型收集
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-10-25 15:09:49" itemprop="dateCreated datePublished" datetime="2024-10-25T15:09:49+08:00">2024-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-29 02:39:51" itemprop="dateModified" datetime="2024-10-29T02:39:51+08:00">2024-10-29</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>16k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>28 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>持续更新ing……</p>
+<span id="more"></span>
+
+<h1 id="一，结式的使用"><a href="#一，结式的使用" class="headerlink" title="一，结式的使用"></a>一，结式的使用</h1><h2 id="1，NewStar-CTF-2024-学以致用"><a href="#1，NewStar-CTF-2024-学以致用" class="headerlink" title="1，NewStar CTF 2024-学以致用"></a>1，NewStar CTF 2024-学以致用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pad</span>(<span class="params">msg, nbits</span>):</span><br><span class="line">    <span class="comment"># pad了一下，仔细看看，别好不容易解出来了却没看到flag👼</span></span><br><span class="line">    pad_length = nbits - <span class="built_in">len</span>(msg) * <span class="number">8</span> - <span class="number">16</span></span><br><span class="line">    <span class="keyword">assert</span> pad_length &gt;= <span class="number">0</span></span><br><span class="line">    pad = random.getrandbits(pad_length).to_bytes((pad_length + <span class="number">7</span>) // <span class="number">8</span>, <span class="string">&quot;big&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> pad[:<span class="built_in">len</span>(pad)//<span class="number">2</span>] + <span class="string">b&quot;*&quot;</span> + msg + <span class="string">b&quot;*&quot;</span> + pad[<span class="built_in">len</span>(pad)//<span class="number">2</span>:]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    p = getPrime(<span class="number">1024</span>)</span><br><span class="line">    q = getPrime(<span class="number">1024</span>)</span><br><span class="line">    n = p*q</span><br><span class="line">    e = <span class="number">3</span></span><br><span class="line">    Nbits = <span class="number">2048</span></span><br><span class="line">    flag = <span class="string">b&#x27;flag&#123;?????&#125;&#x27;</span></span><br><span class="line">    gift = <span class="string">b&#x27;GoOd_byE_nEw_5t@r&#x27;</span></span><br><span class="line">    </span><br><span class="line">    flag1 = bytes_to_long(pad(flag[:<span class="built_in">len</span>(flag)//<span class="number">2</span>], Nbits-<span class="number">1</span>))</span><br><span class="line">    flag2 = bytes_to_long(pad(flag[<span class="built_in">len</span>(flag)//<span class="number">2</span>:], Nbits-<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;n =&#x27;</span>,n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c1 =&#x27;</span>, <span class="built_in">pow</span>(flag1, e, n))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c2 =&#x27;</span>, <span class="built_in">pow</span>(flag2, e, n))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c3 =&#x27;</span>, <span class="built_in">pow</span>(flag1 + flag2 + bytes_to_long(gift), e, n))</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">n = 17072342544150714171879132077494975311237876365187751353863158074020024719122755004761547735987417065592254800869192615807192722193500063611855839293567948232939959753821265552288663615847715716482887552271575844394350597695771100384136647573934496089812758071894172682439278191678102960768874456521879228612030147515967603129172838399997929502420254427798644285909855414606857035622716853274887875327854429218889083561315575947852542496274004905526475639809955792541187225767181054156589100604740904889686749740630242668885218256352895323426975708439512538106136364251265896292820030381364013059573189847777297569447</span></span><br><span class="line"><span class="string">c1 = 8101607280875746172766350224846108949565038929638360896232937975003150339090901182469578468557951846695946788093600030667125114278821199071782965501023811374181199570231982146140558093531414276709503788909827053368206185816004954186722115752214445121933300663507795347827581212475501366473409732970429363451582182754416452300394502623461416323078625518733218381660019606631159370121924340238446442870526675388637840247597153414432589505667533462640554984002009801576552636432097311654946821118444391557368410974979376926427631136361612166670672126393485023374083079458502529640435635667010258110833498681992307452573</span></span><br><span class="line"><span class="string">c2 = 14065316670254822235992102489645154264346717769174145550276846121970418622727279704820311564029018067692096462028836081822787148419633716320984336571241963063899868344606864544582504200779938815500203097282542495029462627888080005688408399148971228321637101593575245562307799087481654331283466914448740771421597528473762480363235531826325289856465115044393153437766069365345615753845871983173987642746989559569021189014927911398163825342784515926151087560415374622389991673648463353143338452444851518310480115818005343166067775633021475978188567581820594153290828348099804042221601767330439504722881619147742710013878</span></span><br><span class="line"><span class="string">c3 = 8094336015065392504689373372598739049074197380146388624166244791783464194652108498071001125262374720857829973449322589841225625661419126346483855290185428811872962549590383450801103516360026351074061702370835578483728260907424050069246549733800397741622131857548326468990903316013060783020272342924805005685309618377803255796096301560780471163963183261626005358125719453918037250566140850975432188309997670739064455030447411193814358481031511873409200036846039285091561677264719855466015739963580639810265153141785946270781617266125399412714450669028767459800001425248072586059267446605354915948603996477113109045600</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gift = bytes_to_long(<span class="string">b&#x27;GoOd_byE_nEw_5t@r&#x27;</span>)</span><br><span class="line">e = <span class="number">3</span></span><br><span class="line">n = <span class="number">17072342544150714171879132077494975311237876365187751353863158074020024719122755004761547735987417065592254800869192615807192722193500063611855839293567948232939959753821265552288663615847715716482887552271575844394350597695771100384136647573934496089812758071894172682439278191678102960768874456521879228612030147515967603129172838399997929502420254427798644285909855414606857035622716853274887875327854429218889083561315575947852542496274004905526475639809955792541187225767181054156589100604740904889686749740630242668885218256352895323426975708439512538106136364251265896292820030381364013059573189847777297569447</span></span><br><span class="line">c1 = <span class="number">8101607280875746172766350224846108949565038929638360896232937975003150339090901182469578468557951846695946788093600030667125114278821199071782965501023811374181199570231982146140558093531414276709503788909827053368206185816004954186722115752214445121933300663507795347827581212475501366473409732970429363451582182754416452300394502623461416323078625518733218381660019606631159370121924340238446442870526675388637840247597153414432589505667533462640554984002009801576552636432097311654946821118444391557368410974979376926427631136361612166670672126393485023374083079458502529640435635667010258110833498681992307452573</span></span><br><span class="line">c2 = <span class="number">14065316670254822235992102489645154264346717769174145550276846121970418622727279704820311564029018067692096462028836081822787148419633716320984336571241963063899868344606864544582504200779938815500203097282542495029462627888080005688408399148971228321637101593575245562307799087481654331283466914448740771421597528473762480363235531826325289856465115044393153437766069365345615753845871983173987642746989559569021189014927911398163825342784515926151087560415374622389991673648463353143338452444851518310480115818005343166067775633021475978188567581820594153290828348099804042221601767330439504722881619147742710013878</span></span><br><span class="line">c3 = <span class="number">8094336015065392504689373372598739049074197380146388624166244791783464194652108498071001125262374720857829973449322589841225625661419126346483855290185428811872962549590383450801103516360026351074061702370835578483728260907424050069246549733800397741622131857548326468990903316013060783020272342924805005685309618377803255796096301560780471163963183261626005358125719453918037250566140850975432188309997670739064455030447411193814358481031511873409200036846039285091561677264719855466015739963580639810265153141785946270781617266125399412714450669028767459800001425248072586059267446605354915948603996477113109045600</span></span><br><span class="line"><span class="comment"># get resultant</span></span><br><span class="line">P.&lt;m1, m2&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f1 = m1**e - c1</span><br><span class="line">f2 = m2**e - c2</span><br><span class="line">f3 = (m1+m2+gift)**e - c3</span><br><span class="line">res1 = f1.sylvester_matrix(f3,m1).det()</span><br><span class="line">res2 = f2.sylvester_matrix(f3,m2).det()</span><br><span class="line"></span><br><span class="line"><span class="comment"># get m2</span></span><br><span class="line">rres = <span class="number">0</span></span><br><span class="line">P.&lt;m2&gt; = PolynomialRing(Zmod(n))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(res1.coefficients())):</span><br><span class="line">    rres += res1.coefficients()[i]*(m2^(res1.exponents()[i][<span class="number">1</span>]))</span><br><span class="line">f2 = m2**e - c2</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gcd</span>(<span class="params">g1, g2</span>):</span><br><span class="line">    <span class="keyword">while</span> g2:</span><br><span class="line">        g1, g2 = g2, g1 % g2</span><br><span class="line">    <span class="comment"># print(g1)</span></span><br><span class="line">    <span class="keyword">return</span> g1.monic()</span><br><span class="line">m2 = <span class="built_in">int</span>(-gcd(rres, f2)[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m2))</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"># get m1 (Method 1)</span></span><br><span class="line"><span class="string">rres = 0</span></span><br><span class="line"><span class="string">P.&lt;m1&gt; = PolynomialRing(Zmod(n))</span></span><br><span class="line"><span class="string">for i in range(len(res2.coefficients())):</span></span><br><span class="line"><span class="string">    # print(res1.coefficients()[i]*(m1^(res1.exponents()[i][1]))</span></span><br><span class="line"><span class="string">    rres += res2.coefficients()[i]*(m1^(res2.exponents()[i][0]))</span></span><br><span class="line"><span class="string">f1 = m1**e - c1</span></span><br><span class="line"><span class="string"># print(rres)</span></span><br><span class="line"><span class="string">def gcd(g1, g2):</span></span><br><span class="line"><span class="string">    while g2:</span></span><br><span class="line"><span class="string">        g1, g2 = g2, g1 % g2</span></span><br><span class="line"><span class="string">    # print(g1)</span></span><br><span class="line"><span class="string">    return g1.monic()</span></span><br><span class="line"><span class="string">m1 = int(-gcd(rres, f1)[0])</span></span><br><span class="line"><span class="string"># print(long_to_bytes(m1))</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get m1 (Method 2)</span></span><br><span class="line">P.&lt;m1&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">f1 = m1**e - c1</span><br><span class="line">f3 = (m1+m2+gift)**e - c3</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gcd</span>(<span class="params">g1, g2</span>):</span><br><span class="line">    <span class="keyword">while</span> g2:</span><br><span class="line">        g1, g2 = g2, g1 % g2</span><br><span class="line">    <span class="comment"># print(g1)</span></span><br><span class="line">    <span class="keyword">return</span> g1.monic()</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(<span class="built_in">int</span>(-gcd(f3, f1)[<span class="number">0</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># flag&#123;W1Sh_you_Bec0me_an_excelL3nt_crypt0G2@pher&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>首先对f1和f3打结式，和f2作gcd得到m2。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(res1.coefficients())):</span><br><span class="line">    rres += res1.coefficients()[i]*(m2^(res1.exponents()[i][<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+
+<p>这一步的目的是因为虽然res只包含y，但它还是在二元多项式环空间中，我们提取系数和指数重新生成一个一元多项式。</p>
+<h1 id="二，多项式RSA"><a href="#二，多项式RSA" class="headerlink" title="二，多项式RSA"></a>二，多项式RSA</h1><h2 id="1，CTFshow-unusualrsa3"><a href="#1，CTFshow-unusualrsa3" class="headerlink" title="1，CTFshow-unusualrsa3"></a>1，CTFshow-unusualrsa3</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ********************</span></span><br><span class="line"><span class="comment"># @Author: Lazzaro</span></span><br><span class="line"><span class="comment"># ********************</span></span><br><span class="line"></span><br><span class="line">p: </span><br><span class="line"><span class="number">2470567871</span></span><br><span class="line"></span><br><span class="line">N: </span><br><span class="line"><span class="number">1932231392</span>*x^<span class="number">255</span> + <span class="number">1432733708</span>*x^<span class="number">254</span> + <span class="number">1270867914</span>*x^<span class="number">253</span> + <span class="number">1573324635</span>*x^<span class="number">252</span> + <span class="number">2378103997</span>*x^<span class="number">251</span> + <span class="number">820889786</span>*x^<span class="number">250</span> + <span class="number">762279735</span>*x^<span class="number">249</span> + <span class="number">1378353578</span>*x^<span class="number">248</span> + <span class="number">1226179520</span>*x^<span class="number">247</span> + <span class="number">657116276</span>*x^<span class="number">246</span> + <span class="number">1264717357</span>*x^<span class="number">245</span> + <span class="number">1015587392</span>*x^<span class="number">244</span> + <span class="number">849699356</span>*x^<span class="number">243</span> + <span class="number">1509168990</span>*x^<span class="number">242</span> + <span class="number">2407367106</span>*x^<span class="number">241</span> + <span class="number">873379233</span>*x^<span class="number">240</span> + <span class="number">2391647981</span>*x^<span class="number">239</span> + <span class="number">517715639</span>*x^<span class="number">238</span> + <span class="number">828941376</span>*x^<span class="number">237</span> + <span class="number">843708018</span>*x^<span class="number">236</span> + <span class="number">1526075137</span>*x^<span class="number">235</span> + <span class="number">1499291590</span>*x^<span class="number">234</span> + <span class="number">235611028</span>*x^<span class="number">233</span> + <span class="number">19615265</span>*x^<span class="number">232</span> + <span class="number">53338886</span>*x^<span class="number">231</span> + <span class="number">434434839</span>*x^<span class="number">230</span> + <span class="number">902171938</span>*x^<span class="number">229</span> + <span class="number">516444143</span>*x^<span class="number">228</span> + <span class="number">1984443642</span>*x^<span class="number">227</span> + <span class="number">966493372</span>*x^<span class="number">226</span> + <span class="number">1166227650</span>*x^<span class="number">225</span> + <span class="number">1824442929</span>*x^<span class="number">224</span> + <span class="number">930231465</span>*x^<span class="number">223</span> + <span class="number">1664522302</span>*x^<span class="number">222</span> + <span class="number">1067203343</span>*x^<span class="number">221</span> + <span class="number">28569139</span>*x^<span class="number">220</span> + <span class="number">2327926559</span>*x^<span class="number">219</span> + <span class="number">899788156</span>*x^<span class="number">218</span> + <span class="number">296985783</span>*x^<span class="number">217</span> + <span class="number">1144578716</span>*x^<span class="number">216</span> + <span class="number">340677494</span>*x^<span class="number">215</span> + <span class="number">254306901</span>*x^<span class="number">214</span> + <span class="number">766641243</span>*x^<span class="number">213</span> + <span class="number">1882320336</span>*x^<span class="number">212</span> + <span class="number">2139903463</span>*x^<span class="number">211</span> + <span class="number">1904225023</span>*x^<span class="number">210</span> + <span class="number">475412928</span>*x^<span class="number">209</span> + <span class="number">127723603</span>*x^<span class="number">208</span> + <span class="number">2015416361</span>*x^<span class="number">207</span> + <span class="number">1500078813</span>*x^<span class="number">206</span> + <span class="number">1845826007</span>*x^<span class="number">205</span> + <span class="number">797486240</span>*x^<span class="number">204</span> + <span class="number">85924125</span>*x^<span class="number">203</span> + <span class="number">1921772796</span>*x^<span class="number">202</span> + <span class="number">1322682658</span>*x^<span class="number">201</span> + <span class="number">2372929383</span>*x^<span class="number">200</span> + <span class="number">1323964787</span>*x^<span class="number">199</span> + <span class="number">1302258424</span>*x^<span class="number">198</span> + <span class="number">271875267</span>*x^<span class="number">197</span> + <span class="number">1297768962</span>*x^<span class="number">196</span> + <span class="number">2147341770</span>*x^<span class="number">195</span> + <span class="number">1665066191</span>*x^<span class="number">194</span> + <span class="number">2342921569</span>*x^<span class="number">193</span> + <span class="number">1450622685</span>*x^<span class="number">192</span> + <span class="number">1453466049</span>*x^<span class="number">191</span> + <span class="number">1105227173</span>*x^<span class="number">190</span> + <span class="number">2357717379</span>*x^<span class="number">189</span> + <span class="number">1044263540</span>*x^<span class="number">188</span> + <span class="number">697816284</span>*x^<span class="number">187</span> + <span class="number">647124526</span>*x^<span class="number">186</span> + <span class="number">1414769298</span>*x^<span class="number">185</span> + <span class="number">657373752</span>*x^<span class="number">184</span> + <span class="number">91863906</span>*x^<span class="number">183</span> + <span class="number">1095083181</span>*x^<span class="number">182</span> + <span class="number">658171402</span>*x^<span class="number">181</span> + <span class="number">75339882</span>*x^<span class="number">180</span> + <span class="number">2216678027</span>*x^<span class="number">179</span> + <span class="number">2208320155</span>*x^<span class="number">178</span> + <span class="number">1351845267</span>*x^<span class="number">177</span> + <span class="number">1740451894</span>*x^<span class="number">176</span> + <span class="number">1302531891</span>*x^<span class="number">175</span> + <span class="number">320751753</span>*x^<span class="number">174</span> + <span class="number">1303477598</span>*x^<span class="number">173</span> + <span class="number">783321123</span>*x^<span class="number">172</span> + <span class="number">1400145206</span>*x^<span class="number">171</span> + <span class="number">1379768234</span>*x^<span class="number">170</span> + <span class="number">1191445903</span>*x^<span class="number">169</span> + <span class="number">946530449</span>*x^<span class="number">168</span> + <span class="number">2008674144</span>*x^<span class="number">167</span> + <span class="number">2247371104</span>*x^<span class="number">166</span> + <span class="number">1267042416</span>*x^<span class="number">165</span> + <span class="number">1795774455</span>*x^<span class="number">164</span> + <span class="number">1976911493</span>*x^<span class="number">163</span> + <span class="number">167037165</span>*x^<span class="number">162</span> + <span class="number">1848717750</span>*x^<span class="number">161</span> + <span class="number">573072954</span>*x^<span class="number">160</span> + <span class="number">1126046031</span>*x^<span class="number">159</span> + <span class="number">376257986</span>*x^<span class="number">158</span> + <span class="number">1001726783</span>*x^<span class="number">157</span> + <span class="number">2250967824</span>*x^<span class="number">156</span> + <span class="number">2339380314</span>*x^<span class="number">155</span> + <span class="number">571922874</span>*x^<span class="number">154</span> + <span class="number">961000788</span>*x^<span class="number">153</span> + <span class="number">306686020</span>*x^<span class="number">152</span> + <span class="number">80717392</span>*x^<span class="number">151</span> + <span class="number">2454799241</span>*x^<span class="number">150</span> + <span class="number">1005427673</span>*x^<span class="number">149</span> + <span class="number">1032257735</span>*x^<span class="number">148</span> + <span class="number">593980163</span>*x^<span class="number">147</span> + <span class="number">1656568780</span>*x^<span class="number">146</span> + <span class="number">1865541316</span>*x^<span class="number">145</span> + <span class="number">2003844061</span>*x^<span class="number">144</span> + <span class="number">1265566902</span>*x^<span class="number">143</span> + <span class="number">573548790</span>*x^<span class="number">142</span> + <span class="number">494063408</span>*x^<span class="number">141</span> + <span class="number">1722266624</span>*x^<span class="number">140</span> + <span class="number">938551278</span>*x^<span class="number">139</span> + <span class="number">2284832499</span>*x^<span class="number">138</span> + <span class="number">597191613</span>*x^<span class="number">137</span> + <span class="number">476121126</span>*x^<span class="number">136</span> + <span class="number">1237943942</span>*x^<span class="number">135</span> + <span class="number">275861976</span>*x^<span class="number">134</span> + <span class="number">1603993606</span>*x^<span class="number">133</span> + <span class="number">1895285286</span>*x^<span class="number">132</span> + <span class="number">589034062</span>*x^<span class="number">131</span> + <span class="number">713986937</span>*x^<span class="number">130</span> + <span class="number">1206118526</span>*x^<span class="number">129</span> + <span class="number">311679750</span>*x^<span class="number">128</span> + <span class="number">1989860861</span>*x^<span class="number">127</span> + <span class="number">1551409650</span>*x^<span class="number">126</span> + <span class="number">2188452501</span>*x^<span class="number">125</span> + <span class="number">1175930901</span>*x^<span class="number">124</span> + <span class="number">1991529213</span>*x^<span class="number">123</span> + <span class="number">2019090583</span>*x^<span class="number">122</span> + <span class="number">215965300</span>*x^<span class="number">121</span> + <span class="number">532432639</span>*x^<span class="number">120</span> + <span class="number">1148806816</span>*x^<span class="number">119</span> + <span class="number">493362403</span>*x^<span class="number">118</span> + <span class="number">2166920790</span>*x^<span class="number">117</span> + <span class="number">185609624</span>*x^<span class="number">116</span> + <span class="number">184370704</span>*x^<span class="number">115</span> + <span class="number">2141702861</span>*x^<span class="number">114</span> + <span class="number">223551915</span>*x^<span class="number">113</span> + <span class="number">298497455</span>*x^<span class="number">112</span> + <span class="number">722376028</span>*x^<span class="number">111</span> + <span class="number">678813029</span>*x^<span class="number">110</span> + <span class="number">915121681</span>*x^<span class="number">109</span> + <span class="number">1107871854</span>*x^<span class="number">108</span> + <span class="number">1369194845</span>*x^<span class="number">107</span> + <span class="number">328165402</span>*x^<span class="number">106</span> + <span class="number">1792110161</span>*x^<span class="number">105</span> + <span class="number">798151427</span>*x^<span class="number">104</span> + <span class="number">954952187</span>*x^<span class="number">103</span> + <span class="number">471555401</span>*x^<span class="number">102</span> + <span class="number">68969853</span>*x^<span class="number">101</span> + <span class="number">453598910</span>*x^<span class="number">100</span> + <span class="number">2458706380</span>*x^<span class="number">99</span> + <span class="number">889221741</span>*x^<span class="number">98</span> + <span class="number">320515821</span>*x^<span class="number">97</span> + <span class="number">1549538476</span>*x^<span class="number">96</span> + <span class="number">909607400</span>*x^<span class="number">95</span> + <span class="number">499973742</span>*x^<span class="number">94</span> + <span class="number">552728308</span>*x^<span class="number">93</span> + <span class="number">1538610725</span>*x^<span class="number">92</span> + <span class="number">186272117</span>*x^<span class="number">91</span> + <span class="number">862153635</span>*x^<span class="number">90</span> + <span class="number">981463824</span>*x^<span class="number">89</span> + <span class="number">2400233482</span>*x^<span class="number">88</span> + <span class="number">1742475067</span>*x^<span class="number">87</span> + <span class="number">437801940</span>*x^<span class="number">86</span> + <span class="number">1504315277</span>*x^<span class="number">85</span> + <span class="number">1756497351</span>*x^<span class="number">84</span> + <span class="number">197089583</span>*x^<span class="number">83</span> + <span class="number">2082285292</span>*x^<span class="number">82</span> + <span class="number">109369793</span>*x^<span class="number">81</span> + <span class="number">2197572728</span>*x^<span class="number">80</span> + <span class="number">107235697</span>*x^<span class="number">79</span> + <span class="number">567322310</span>*x^<span class="number">78</span> + <span class="number">1755205142</span>*x^<span class="number">77</span> + <span class="number">1089091449</span>*x^<span class="number">76</span> + <span class="number">1993836978</span>*x^<span class="number">75</span> + <span class="number">2393709429</span>*x^<span class="number">74</span> + <span class="number">170647828</span>*x^<span class="number">73</span> + <span class="number">1205814501</span>*x^<span class="number">72</span> + <span class="number">2444570340</span>*x^<span class="number">71</span> + <span class="number">328372190</span>*x^<span class="number">70</span> + <span class="number">1929704306</span>*x^<span class="number">69</span> + <span class="number">717796715</span>*x^<span class="number">68</span> + <span class="number">1057597610</span>*x^<span class="number">67</span> + <span class="number">482243092</span>*x^<span class="number">66</span> + <span class="number">277530014</span>*x^<span class="number">65</span> + <span class="number">2393168828</span>*x^<span class="number">64</span> + <span class="number">12380707</span>*x^<span class="number">63</span> + <span class="number">1108646500</span>*x^<span class="number">62</span> + <span class="number">637721571</span>*x^<span class="number">61</span> + <span class="number">604983755</span>*x^<span class="number">60</span> + <span class="number">1142068056</span>*x^<span class="number">59</span> + <span class="number">1911643955</span>*x^<span class="number">58</span> + <span class="number">1713852330</span>*x^<span class="number">57</span> + <span class="number">1757273231</span>*x^<span class="number">56</span> + <span class="number">1778819295</span>*x^<span class="number">55</span> + <span class="number">957146826</span>*x^<span class="number">54</span> + <span class="number">900005615</span>*x^<span class="number">53</span> + <span class="number">521467961</span>*x^<span class="number">52</span> + <span class="number">1255707235</span>*x^<span class="number">51</span> + <span class="number">861871574</span>*x^<span class="number">50</span> + <span class="number">397953653</span>*x^<span class="number">49</span> + <span class="number">1259753202</span>*x^<span class="number">48</span> + <span class="number">471431762</span>*x^<span class="number">47</span> + <span class="number">1245956917</span>*x^<span class="number">46</span> + <span class="number">1688297180</span>*x^<span class="number">45</span> + <span class="number">1536178591</span>*x^<span class="number">44</span> + <span class="number">1833258462</span>*x^<span class="number">43</span> + <span class="number">1369087493</span>*x^<span class="number">42</span> + <span class="number">459426544</span>*x^<span class="number">41</span> + <span class="number">418389643</span>*x^<span class="number">40</span> + <span class="number">1800239647</span>*x^<span class="number">39</span> + <span class="number">2467433889</span>*x^<span class="number">38</span> + <span class="number">477713059</span>*x^<span class="number">37</span> + <span class="number">1898813986</span>*x^<span class="number">36</span> + <span class="number">2202042708</span>*x^<span class="number">35</span> + <span class="number">894088738</span>*x^<span class="number">34</span> + <span class="number">1204601190</span>*x^<span class="number">33</span> + <span class="number">1592921228</span>*x^<span class="number">32</span> + <span class="number">2234027582</span>*x^<span class="number">31</span> + <span class="number">1308900201</span>*x^<span class="number">30</span> + <span class="number">461430959</span>*x^<span class="number">29</span> + <span class="number">718926726</span>*x^<span class="number">28</span> + <span class="number">2081988029</span>*x^<span class="number">27</span> + <span class="number">1337342428</span>*x^<span class="number">26</span> + <span class="number">2039153142</span>*x^<span class="number">25</span> + <span class="number">1364177470</span>*x^<span class="number">24</span> + <span class="number">613659517</span>*x^<span class="number">23</span> + <span class="number">853968854</span>*x^<span class="number">22</span> + <span class="number">1013582418</span>*x^<span class="number">21</span> + <span class="number">1167857934</span>*x^<span class="number">20</span> + <span class="number">2014147362</span>*x^<span class="number">19</span> + <span class="number">1083466865</span>*x^<span class="number">18</span> + <span class="number">1091690302</span>*x^<span class="number">17</span> + <span class="number">302196939</span>*x^<span class="number">16</span> + <span class="number">1946675573</span>*x^<span class="number">15</span> + <span class="number">2450124113</span>*x^<span class="number">14</span> + <span class="number">1199066291</span>*x^<span class="number">13</span> + <span class="number">401889502</span>*x^<span class="number">12</span> + <span class="number">712045611</span>*x^<span class="number">11</span> + <span class="number">1850096904</span>*x^<span class="number">10</span> + <span class="number">1808400208</span>*x^<span class="number">9</span> + <span class="number">1567687877</span>*x^<span class="number">8</span> + <span class="number">2013445952</span>*x^<span class="number">7</span> + <span class="number">2435360770</span>*x^<span class="number">6</span> + <span class="number">2414019676</span>*x^<span class="number">5</span> + <span class="number">2277377050</span>*x^<span class="number">4</span> + <span class="number">2148341337</span>*x^<span class="number">3</span> + <span class="number">1073721716</span>*x^<span class="number">2</span> + <span class="number">1045363399</span>*x + <span class="number">1809685811</span></span><br><span class="line"></span><br><span class="line">m^<span class="number">0x10001</span>%N:  </span><br><span class="line"><span class="number">922927962</span>*x^<span class="number">254</span> + <span class="number">1141958714</span>*x^<span class="number">253</span> + <span class="number">295409606</span>*x^<span class="number">252</span> + <span class="number">1197491798</span>*x^<span class="number">251</span> + <span class="number">2463440866</span>*x^<span class="number">250</span> + <span class="number">1671460946</span>*x^<span class="number">249</span> + <span class="number">967543123</span>*x^<span class="number">248</span> + <span class="number">119796323</span>*x^<span class="number">247</span> + <span class="number">1172760592</span>*x^<span class="number">246</span> + <span class="number">770640267</span>*x^<span class="number">245</span> + <span class="number">1093816376</span>*x^<span class="number">244</span> + <span class="number">196379610</span>*x^<span class="number">243</span> + <span class="number">2205270506</span>*x^<span class="number">242</span> + <span class="number">459693142</span>*x^<span class="number">241</span> + <span class="number">829093322</span>*x^<span class="number">240</span> + <span class="number">816440689</span>*x^<span class="number">239</span> + <span class="number">648546871</span>*x^<span class="number">238</span> + <span class="number">1533372161</span>*x^<span class="number">237</span> + <span class="number">1349964227</span>*x^<span class="number">236</span> + <span class="number">2132166634</span>*x^<span class="number">235</span> + <span class="number">403690250</span>*x^<span class="number">234</span> + <span class="number">835793319</span>*x^<span class="number">233</span> + <span class="number">2056945807</span>*x^<span class="number">232</span> + <span class="number">480459588</span>*x^<span class="number">231</span> + <span class="number">1401028924</span>*x^<span class="number">230</span> + <span class="number">2231055325</span>*x^<span class="number">229</span> + <span class="number">1716893325</span>*x^<span class="number">228</span> + <span class="number">16299164</span>*x^<span class="number">227</span> + <span class="number">1125072063</span>*x^<span class="number">226</span> + <span class="number">1903340994</span>*x^<span class="number">225</span> + <span class="number">1372971897</span>*x^<span class="number">224</span> + <span class="number">242927971</span>*x^<span class="number">223</span> + <span class="number">711296789</span>*x^<span class="number">222</span> + <span class="number">535407256</span>*x^<span class="number">221</span> + <span class="number">976773179</span>*x^<span class="number">220</span> + <span class="number">533569974</span>*x^<span class="number">219</span> + <span class="number">501041034</span>*x^<span class="number">218</span> + <span class="number">326232105</span>*x^<span class="number">217</span> + <span class="number">2248775507</span>*x^<span class="number">216</span> + <span class="number">1010397596</span>*x^<span class="number">215</span> + <span class="number">1641864795</span>*x^<span class="number">214</span> + <span class="number">1365178317</span>*x^<span class="number">213</span> + <span class="number">1038477612</span>*x^<span class="number">212</span> + <span class="number">2201213637</span>*x^<span class="number">211</span> + <span class="number">760847531</span>*x^<span class="number">210</span> + <span class="number">2072085932</span>*x^<span class="number">209</span> + <span class="number">168159257</span>*x^<span class="number">208</span> + <span class="number">70202009</span>*x^<span class="number">207</span> + <span class="number">1193933930</span>*x^<span class="number">206</span> + <span class="number">1559162272</span>*x^<span class="number">205</span> + <span class="number">1380642174</span>*x^<span class="number">204</span> + <span class="number">1296625644</span>*x^<span class="number">203</span> + <span class="number">1338288152</span>*x^<span class="number">202</span> + <span class="number">843839510</span>*x^<span class="number">201</span> + <span class="number">460174838</span>*x^<span class="number">200</span> + <span class="number">660412151</span>*x^<span class="number">199</span> + <span class="number">716865491</span>*x^<span class="number">198</span> + <span class="number">772161222</span>*x^<span class="number">197</span> + <span class="number">924177515</span>*x^<span class="number">196</span> + <span class="number">1372790342</span>*x^<span class="number">195</span> + <span class="number">320044037</span>*x^<span class="number">194</span> + <span class="number">117027412</span>*x^<span class="number">193</span> + <span class="number">814803809</span>*x^<span class="number">192</span> + <span class="number">1175035545</span>*x^<span class="number">191</span> + <span class="number">244769161</span>*x^<span class="number">190</span> + <span class="number">2116927976</span>*x^<span class="number">189</span> + <span class="number">617780431</span>*x^<span class="number">188</span> + <span class="number">342577832</span>*x^<span class="number">187</span> + <span class="number">356586691</span>*x^<span class="number">186</span> + <span class="number">695795444</span>*x^<span class="number">185</span> + <span class="number">281750528</span>*x^<span class="number">184</span> + <span class="number">133432552</span>*x^<span class="number">183</span> + <span class="number">741747447</span>*x^<span class="number">182</span> + <span class="number">2138036298</span>*x^<span class="number">181</span> + <span class="number">524386605</span>*x^<span class="number">180</span> + <span class="number">1231287380</span>*x^<span class="number">179</span> + <span class="number">1246706891</span>*x^<span class="number">178</span> + <span class="number">69277523</span>*x^<span class="number">177</span> + <span class="number">2124927225</span>*x^<span class="number">176</span> + <span class="number">2334697345</span>*x^<span class="number">175</span> + <span class="number">1769733543</span>*x^<span class="number">174</span> + <span class="number">2248037872</span>*x^<span class="number">173</span> + <span class="number">1899902290</span>*x^<span class="number">172</span> + <span class="number">409421149</span>*x^<span class="number">171</span> + <span class="number">1223261878</span>*x^<span class="number">170</span> + <span class="number">666594221</span>*x^<span class="number">169</span> + <span class="number">1795456341</span>*x^<span class="number">168</span> + <span class="number">406003299</span>*x^<span class="number">167</span> + <span class="number">992699270</span>*x^<span class="number">166</span> + <span class="number">2201384104</span>*x^<span class="number">165</span> + <span class="number">907692883</span>*x^<span class="number">164</span> + <span class="number">1667882231</span>*x^<span class="number">163</span> + <span class="number">1414341647</span>*x^<span class="number">162</span> + <span class="number">1592159752</span>*x^<span class="number">161</span> + <span class="number">28054099</span>*x^<span class="number">160</span> + <span class="number">2184618098</span>*x^<span class="number">159</span> + <span class="number">2047102725</span>*x^<span class="number">158</span> + <span class="number">103202495</span>*x^<span class="number">157</span> + <span class="number">1803852525</span>*x^<span class="number">156</span> + <span class="number">446464179</span>*x^<span class="number">155</span> + <span class="number">909116906</span>*x^<span class="number">154</span> + <span class="number">1541693644</span>*x^<span class="number">153</span> + <span class="number">166545130</span>*x^<span class="number">152</span> + <span class="number">2283548843</span>*x^<span class="number">151</span> + <span class="number">2348768005</span>*x^<span class="number">150</span> + <span class="number">71682607</span>*x^<span class="number">149</span> + <span class="number">484339546</span>*x^<span class="number">148</span> + <span class="number">669511666</span>*x^<span class="number">147</span> + <span class="number">2110974006</span>*x^<span class="number">146</span> + <span class="number">1634563992</span>*x^<span class="number">145</span> + <span class="number">1810433926</span>*x^<span class="number">144</span> + <span class="number">2388805064</span>*x^<span class="number">143</span> + <span class="number">1200258695</span>*x^<span class="number">142</span> + <span class="number">1555191384</span>*x^<span class="number">141</span> + <span class="number">363842947</span>*x^<span class="number">140</span> + <span class="number">1105757887</span>*x^<span class="number">139</span> + <span class="number">402111289</span>*x^<span class="number">138</span> + <span class="number">361094351</span>*x^<span class="number">137</span> + <span class="number">1788238752</span>*x^<span class="number">136</span> + <span class="number">2017677334</span>*x^<span class="number">135</span> + <span class="number">1506224550</span>*x^<span class="number">134</span> + <span class="number">648916609</span>*x^<span class="number">133</span> + <span class="number">2008973424</span>*x^<span class="number">132</span> + <span class="number">2452922307</span>*x^<span class="number">131</span> + <span class="number">1446527028</span>*x^<span class="number">130</span> + <span class="number">29659632</span>*x^<span class="number">129</span> + <span class="number">627390142</span>*x^<span class="number">128</span> + <span class="number">1695661760</span>*x^<span class="number">127</span> + <span class="number">734686497</span>*x^<span class="number">126</span> + <span class="number">227059690</span>*x^<span class="number">125</span> + <span class="number">1219692361</span>*x^<span class="number">124</span> + <span class="number">635166359</span>*x^<span class="number">123</span> + <span class="number">428703291</span>*x^<span class="number">122</span> + <span class="number">2334823064</span>*x^<span class="number">121</span> + <span class="number">204888978</span>*x^<span class="number">120</span> + <span class="number">1694957361</span>*x^<span class="number">119</span> + <span class="number">94211180</span>*x^<span class="number">118</span> + <span class="number">2207723563</span>*x^<span class="number">117</span> + <span class="number">872340606</span>*x^<span class="number">116</span> + <span class="number">46197669</span>*x^<span class="number">115</span> + <span class="number">710312088</span>*x^<span class="number">114</span> + <span class="number">305132032</span>*x^<span class="number">113</span> + <span class="number">1621042631</span>*x^<span class="number">112</span> + <span class="number">2023404084</span>*x^<span class="number">111</span> + <span class="number">2169254305</span>*x^<span class="number">110</span> + <span class="number">463525650</span>*x^<span class="number">109</span> + <span class="number">2349964255</span>*x^<span class="number">108</span> + <span class="number">626689949</span>*x^<span class="number">107</span> + <span class="number">2072533779</span>*x^<span class="number">106</span> + <span class="number">177264308</span>*x^<span class="number">105</span> + <span class="number">153948342</span>*x^<span class="number">104</span> + <span class="number">1992646054</span>*x^<span class="number">103</span> + <span class="number">2379817214</span>*x^<span class="number">102</span> + <span class="number">1396334187</span>*x^<span class="number">101</span> + <span class="number">2254165812</span>*x^<span class="number">100</span> + <span class="number">1300455472</span>*x^<span class="number">99</span> + <span class="number">2396842759</span>*x^<span class="number">98</span> + <span class="number">2398953180</span>*x^<span class="number">97</span> + <span class="number">88249450</span>*x^<span class="number">96</span> + <span class="number">1726340322</span>*x^<span class="number">95</span> + <span class="number">2004986735</span>*x^<span class="number">94</span> + <span class="number">2446249940</span>*x^<span class="number">93</span> + <span class="number">520126803</span>*x^<span class="number">92</span> + <span class="number">821544954</span>*x^<span class="number">91</span> + <span class="number">1177737015</span>*x^<span class="number">90</span> + <span class="number">676286546</span>*x^<span class="number">89</span> + <span class="number">1519043368</span>*x^<span class="number">88</span> + <span class="number">224894464</span>*x^<span class="number">87</span> + <span class="number">1742023262</span>*x^<span class="number">86</span> + <span class="number">142627164</span>*x^<span class="number">85</span> + <span class="number">1427710141</span>*x^<span class="number">84</span> + <span class="number">1504189919</span>*x^<span class="number">83</span> + <span class="number">688315682</span>*x^<span class="number">82</span> + <span class="number">1397842239</span>*x^<span class="number">81</span> + <span class="number">435187331</span>*x^<span class="number">80</span> + <span class="number">433176780</span>*x^<span class="number">79</span> + <span class="number">454834357</span>*x^<span class="number">78</span> + <span class="number">1046713282</span>*x^<span class="number">77</span> + <span class="number">1208458516</span>*x^<span class="number">76</span> + <span class="number">811240741</span>*x^<span class="number">75</span> + <span class="number">151611952</span>*x^<span class="number">74</span> + <span class="number">164192249</span>*x^<span class="number">73</span> + <span class="number">353336244</span>*x^<span class="number">72</span> + <span class="number">1779538914</span>*x^<span class="number">71</span> + <span class="number">1489144873</span>*x^<span class="number">70</span> + <span class="number">213140082</span>*x^<span class="number">69</span> + <span class="number">1874778522</span>*x^<span class="number">68</span> + <span class="number">908618863</span>*x^<span class="number">67</span> + <span class="number">1058334731</span>*x^<span class="number">66</span> + <span class="number">1706255211</span>*x^<span class="number">65</span> + <span class="number">708134837</span>*x^<span class="number">64</span> + <span class="number">1382118347</span>*x^<span class="number">63</span> + <span class="number">2111915733</span>*x^<span class="number">62</span> + <span class="number">1273497300</span>*x^<span class="number">61</span> + <span class="number">368639880</span>*x^<span class="number">60</span> + <span class="number">1652005004</span>*x^<span class="number">59</span> + <span class="number">1977610754</span>*x^<span class="number">58</span> + <span class="number">1412680185</span>*x^<span class="number">57</span> + <span class="number">2312775720</span>*x^<span class="number">56</span> + <span class="number">59793381</span>*x^<span class="number">55</span> + <span class="number">1345145822</span>*x^<span class="number">54</span> + <span class="number">627534850</span>*x^<span class="number">53</span> + <span class="number">2159477761</span>*x^<span class="number">52</span> + <span class="number">10450988</span>*x^<span class="number">51</span> + <span class="number">1479007796</span>*x^<span class="number">50</span> + <span class="number">2082579205</span>*x^<span class="number">49</span> + <span class="number">1158447154</span>*x^<span class="number">48</span> + <span class="number">126359830</span>*x^<span class="number">47</span> + <span class="number">393411272</span>*x^<span class="number">46</span> + <span class="number">2343384236</span>*x^<span class="number">45</span> + <span class="number">2191577465</span>*x^<span class="number">44</span> + <span class="number">1281188680</span>*x^<span class="number">43</span> + <span class="number">230049708</span>*x^<span class="number">42</span> + <span class="number">539600199</span>*x^<span class="number">41</span> + <span class="number">1711135601</span>*x^<span class="number">40</span> + <span class="number">1659775448</span>*x^<span class="number">39</span> + <span class="number">1716176055</span>*x^<span class="number">38</span> + <span class="number">904363231</span>*x^<span class="number">37</span> + <span class="number">2385749710</span>*x^<span class="number">36</span> + <span class="number">567278351</span>*x^<span class="number">35</span> + <span class="number">404199078</span>*x^<span class="number">34</span> + <span class="number">372670353</span>*x^<span class="number">33</span> + <span class="number">1286079784</span>*x^<span class="number">32</span> + <span class="number">1744355671</span>*x^<span class="number">31</span> + <span class="number">2316856064</span>*x^<span class="number">30</span> + <span class="number">2106475476</span>*x^<span class="number">29</span> + <span class="number">614988454</span>*x^<span class="number">28</span> + <span class="number">2149964943</span>*x^<span class="number">27</span> + <span class="number">1065233185</span>*x^<span class="number">26</span> + <span class="number">188130174</span>*x^<span class="number">25</span> + <span class="number">540415659</span>*x^<span class="number">24</span> + <span class="number">1031409799</span>*x^<span class="number">23</span> + <span class="number">1067085678</span>*x^<span class="number">22</span> + <span class="number">1005161755</span>*x^<span class="number">21</span> + <span class="number">249654085</span>*x^<span class="number">20</span> + <span class="number">1816791634</span>*x^<span class="number">19</span> + <span class="number">1437500292</span>*x^<span class="number">18</span> + <span class="number">448596413</span>*x^<span class="number">17</span> + <span class="number">2397497659</span>*x^<span class="number">16</span> + <span class="number">2353732701</span>*x^<span class="number">15</span> + <span class="number">2068949189</span>*x^<span class="number">14</span> + <span class="number">1826419168</span>*x^<span class="number">13</span> + <span class="number">1265366199</span>*x^<span class="number">12</span> + <span class="number">547031306</span>*x^<span class="number">11</span> + <span class="number">1016962374</span>*x^<span class="number">10</span> + <span class="number">160089486</span>*x^<span class="number">9</span> + <span class="number">2264803979</span>*x^<span class="number">8</span> + <span class="number">1081806194</span>*x^<span class="number">7</span> + <span class="number">824215340</span>*x^<span class="number">6</span> + <span class="number">497731793</span>*x^<span class="number">5</span> + <span class="number">45017166</span>*x^<span class="number">4</span> + <span class="number">317548920</span>*x^<span class="number">3</span> + <span class="number">1391127733</span>*x^<span class="number">2</span> + <span class="number">1752881284</span>*x + <span class="number">1290424106</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/NOTE/" rel="tag"># NOTE</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/08/17/DSA%E7%AD%BE%E5%90%8D/" rel="prev" title="DSA签名">
+                  <i class="fa fa-angle-left"></i> DSA签名
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">mi1n9</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">96k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:54</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
