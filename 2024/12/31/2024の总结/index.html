@@ -19,28 +19,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Rabin攻击">
+    <meta name="description" content="前言细想来自己开始接触CTF也大半年了，这期间发生了蛮多的事，刚好年末了，顺带写个年终总结吧，不过其实也算不上，毕竟时间跨度不止一年了。 About CTF  其实严格来说从去年高考完选志愿之前其实都对网络安全这方面 没啥了解(其实唯一的了解就来自某个逆天电视剧)，现在所在的密码科学与技术这个专业也只是第一志愿没录上之后凑数的,当时也只是从各种途径了解到这个专业前景蛮好。具体了解也是一片空白。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相关数学基础知识">
-<meta property="og:url" content="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:title" content="2024の总结">
+<meta property="og:url" content="http://example.com/2024/12/31/2024%E3%81%AE%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="浮白载笔">
-<meta property="og:description" content="Rabin攻击">
+<meta property="og:description" content="前言细想来自己开始接触CTF也大半年了，这期间发生了蛮多的事，刚好年末了，顺带写个年终总结吧，不过其实也算不上，毕竟时间跨度不止一年了。 About CTF  其实严格来说从去年高考完选志愿之前其实都对网络安全这方面 没啥了解(其实唯一的了解就来自某个逆天电视剧)，现在所在的密码科学与技术这个专业也只是第一志愿没录上之后凑数的,当时也只是从各种途径了解到这个专业前景蛮好。具体了解也是一片空白。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-25T11:13:26.000Z">
-<meta property="article:modified_time" content="2024-10-29T17:06:55.448Z">
+<meta property="og:image" content="https://ooo.0x0.ooo/2024/12/31/OEPiR1.jpg">
+<meta property="article:published_time" content="2024-12-31T15:23:33.000Z">
+<meta property="article:modified_time" content="2024-12-31T15:24:26.738Z">
 <meta property="article:author" content="mi1n9">
-<meta property="article:tag" content="NOTE">
+<meta property="article:tag" content="Thinking">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ooo.0x0.ooo/2024/12/31/OEPiR1.jpg">
 
 
-<link rel="canonical" href="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+<link rel="canonical" href="http://example.com/2024/12/31/2024%E3%81%AE%E6%80%BB%E7%BB%93/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/","path":"2024/03/25/相关数学基础知识/","title":"相关数学基础知识"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/12/31/2024%E3%81%AE%E6%80%BB%E7%BB%93/","path":"2024/12/31/2024の总结/","title":"2024の总结"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>相关数学基础知识 | 浮白载笔</title>
+<title>2024の总结 | 浮白载笔</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -142,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Rabin%E6%94%BB%E5%87%BB"><span class="nav-number">1.</span> <span class="nav-text">Rabin攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-number">1.1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99"><span class="nav-number">1.2.</span> <span class="nav-text">二次剩余</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#About-CTF"><span class="nav-number">2.</span> <span class="nav-text">About CTF</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#About-Life"><span class="nav-number">3.</span> <span class="nav-text">About Life</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#About-Love"><span class="nav-number">4.</span> <span class="nav-text">About Love</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Future"><span class="nav-number">5.</span> <span class="nav-text">Future</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,7 +198,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/31/2024%E3%81%AE%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Image_1710243749806.jpg">
@@ -209,12 +211,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="相关数学基础知识 | 浮白载笔">
+      <meta itemprop="name" content="2024の总结 | 浮白载笔">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          相关数学基础知识
+          2024の总结
         </h1>
 
         <div class="post-meta-container">
@@ -224,15 +226,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-03-25 19:13:26" itemprop="dateCreated datePublished" datetime="2024-03-25T19:13:26+08:00">2024-03-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-30 01:06:55" itemprop="dateModified" datetime="2024-10-30T01:06:55+08:00">2024-10-30</time>
+      <time title="创建时间：2024-12-31 23:23:33 / 修改时间：23:24:26" itemprop="dateCreated datePublished" datetime="2024-12-31T23:23:33+08:00">2024-12-31</time>
     </span>
 
   
@@ -249,14 +245,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>230</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -266,16 +262,21 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Rabin攻击"><a href="#Rabin攻击" class="headerlink" title="Rabin攻击"></a>Rabin攻击</h1><span id="more"></span>
-
-<p>首先引出二次剩余和欧拉准则，欧拉准则的证明又设计涉及费马小定理，下面一一说明。</p>
-<h2 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>若p为素数，gcd(a,p)&#x3D;1,则$a^{p}$≡a(modp),也可写为$a^{p-1}$≡1(modp).</p>
-<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><h2 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><ul>
-<li><p>若<em>p</em>是素数,a<em>不是p</em>的倍数且与一个平方数模p<em>同余,则称a</em>是模p<em>的二次剩余,记作</em>a<em>∈</em>QR</p>
-<p>例如$2^{2}$≡4(mod13) 则称4是模13的二次剩余</p>
-<p>同样我们把不等于0也不是模p<em>的二次剩余的数称为非二次剩余,记作a</em>∈<em>NR</em></p>
-</li>
-</ul>
+    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>细想来自己开始接触CTF也大半年了，这期间发生了蛮多的事，刚好年末了，顺带写个年终总结吧，不过其实也算不上，毕竟时间跨度不止一年了。</p>
+<h1 id="About-CTF"><a href="#About-CTF" class="headerlink" title="About CTF"></a>About CTF</h1><p>  其实严格来说从去年高考完选志愿之前其实都对网络安全这方面 没啥了解(其实唯一的了解就来自某个逆天电视剧)，现在所在的密码科学与技术这个专业也只是第一志愿没录上之后凑数的,当时也只是从各种途径了解到这个专业前景蛮好。具体了解也是一片空白。</p>
+<p>  填完志愿的那个暑假，闲着无聊的我在翻学校的公众号时发现了网安协会，当时想着自己也是这方面的加了也挺合适，进群后就看到学长在宣传战队，当时觉得”wc，战队唉，好帅好牛逼“，所以去听了会长的招新宣讲，也就是我们的无敌<a target="_blank" rel="noopener" href="https://github.com/Boogipop">Boogipop神！</a>。给当时的我留下了不可磨灭的震撼，看完我直接化身热血小子恨不得直接把某个人电脑黑了看看实力。当时因为自己专业的原因，选择了Crypto方向学习(这个方向黑别人电脑好像难度蛮大哈哈哈哈哈哈哈哈哈)，不过其实暑假并没有学到什么，甚至只看了看古典密码，当时刚结束地狱般的高三玩心太重了根本坐不住hhh，在最后的招新考核中也只做出了一道古典就耻辱下机了，当时连Python完全不会，只会做txt题，看到后缀是.py的文件直接抓瞎哈哈哈。也是不出意外地被刷掉了。当时准大一通过考核的就只有一个，就是这位现在的<a target="_blank" rel="noopener" href="http://www.miaoaixuan.cn/">misc✌</a>.</p>
+<p> 大一上学期其实都没怎么学，还没摆脱高中思维，只是在按部就班的学高数，考四级这些，没啥好说的，跳过跳过……</p>
+<p>  寒假才算真正开始学习，先在图书馆里花一周速成了一下Python，然后跟着BUU上刷了下题，学了学基础的RSA…..然后就去参加考核哩，现在想想当时其实相当于啥都没学，不过多亏考核难度不大，也是成功通过了，成为了HnuSec的一员.</p>
+<p>  然后是大一下,这学期打了蛮多比赛的，虽然大部分都是新生赛吧，在打比赛的时候也通过题目学到了很多，我个人觉得这种以赛促学其实蛮有效果的，在对比赛的复现中也学到了好多新知识。从只会套RSA板子解题到可以自己独立做出一些比较难的题，这当然也离不开战队里学长<a target="_blank" rel="noopener" href="https://shinichicun.top/">Shin</a>.的培养啦，有不会的问他就对了，简直无所不知！之后嘛也没啥好说的就打比赛，复现这样循环着来了……</p>
+<p>  又是一年暑假，其实暑假学的还蛮多，因为之前相当于只是对RSA比较熟悉，所以暑假着重研究了一下其他的加密算法，包括对称密码，椭圆曲线(这个现在还是不太会，算是一个挖了比较久的坑了)。然后给战队的招新赛出了题，也是在暑假，萌生了想加入联合战队的想法，感觉是一个更高的平台吧，认识更多厉害的师傅也能更快的成长，所以暑假的学习似乎也显得更有动力了？(应该吧)</p>
+<p>  所以在刚开学的时候也是参加了NepCTF，并在爆零耻辱下机后“厚颜无耻”地交了自己的简历表达了自己想加入Nepnep的想法，经过两个月(漫长)的考核之后也是成功加入了Nepnep，也是完成了自己的一个阶段性目标。这学期也是因为加了战队所以紧迫感也是挺足，或主动或被动的学了一些东西，但是加上校队同届专注打密码的目前好像就我一个，学长大四了也要忙毕设的事情。所以还是有些紧迫感的。最近几天也稍微计划了一下寒假的学习计划，希望不要咕咕……</p>
+<p>闲着无聊经常翻其他师傅的博客，时常感叹于别人的的厉害，总是不自量力地换算别人在我这个时候的实力然后被打击第二次。所以怎么说呢。其实“内耗”还挺严重的，经常学着学着就开始莫名emo和焦躁，怀疑自己对于密码的坚持，自己究竟适合吗。总是埋怨自己怎么还在学这么基础的东西，唉。总之希望明年专注于当下吧，不要让别人影响自己（立flag</p>
+<h1 id="About-Life"><a href="#About-Life" class="headerlink" title="About Life"></a>About Life</h1><p>谈谈学业，唉一言难尽，保研估计是指望不上了，大四准备考研吧呜呜呜。上学期因为刚接触CTF，有一种莫名的热情，加上各种因素，导致CTF和学业的平衡不是很好，其实回过头来看，属于是技术没学好，学业也落下了。</p>
+<p>今年其实过的还是蛮充实的，暑假跟高中同学去西安旅游，几个人喝强爽喝的烂醉(这东西真有问题吧)。然后去了博物院，城墙……。这学期去看了心心念念的许嵩的演唱会。</p>
+<p><a target="_blank" rel="noopener" href="https://img.tg/image/OEPiR1"><img src="https://ooo.0x0.ooo/2024/12/31/OEPiR1.jpg" alt="OEPiR1.jpg"></a></p>
+<p>总的来说是充实的一年www（其实是写到这开始莫名烦躁不想写了）</p>
+<h1 id="About-Love"><a href="#About-Love" class="headerlink" title="About Love"></a>About Love</h1><p>关于感情，说来惭愧。已经被甩快两年的我还是忘不掉初恋，这下真成舔狗了唉。再加上另一方面对感情的需求也没有那么强烈。导致我今年一直处在纯宅男状态，上了大学没加几个女生。短时间内估计是就这样了。随缘吧</p>
+<h1 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h1><p>奇怪，这总结怎么越写越不想写…..自己的文字能力真是退化的厉害。但还是要展望一下的。希望明年少点精神内耗吧，专注学习密码，顺便希望点一些其他的技能树吧。</p>
 
     </div>
 
@@ -285,21 +286,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/NOTE/" rel="tag"># NOTE</a>
+              <a href="/tags/Thinking/" rel="tag"># Thinking</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/14/2024BeginCTF-Crypto-fake-N/" rel="prev" title="2024BeginCTF Crypto--fake_N">
-                  <i class="fa fa-angle-left"></i> 2024BeginCTF Crypto--fake_N
+                <a href="/2024/10/25/RSA%E9%A2%98%E5%9E%8B%E6%94%B6%E9%9B%86/" rel="prev" title="RSA题型收集">
+                  <i class="fa fa-angle-left"></i> RSA题型收集
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/04/28/XYCTF-crypto/" rel="next" title="XYCTF-crypto">
-                  XYCTF-crypto <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -401,7 +399,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
