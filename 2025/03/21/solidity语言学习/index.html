@@ -26,11 +26,15 @@
 <meta property="og:site_name" content="浮白载笔">
 <meta property="og:description" content="ouo 最近了解了点区块链的知识，先学学基础语言吧 一，前期准备首先你需要一个IDE,编写solidity智能合约一般使用的是Remix IDE，因为下desktop折磨了半天还是失败了，所以只能用网页版了www。在一个Solidity智能合约中，你首先需要明确Solidity的使用版本，它应该被标注在Solidity代码的最上面，Solidity是一个更新频率很高的语言。所以我们需要告诉代码，要">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ooo.0x0.ooo/2025/03/22/OSLRcx.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2025/03/22/OSL4Mj.png">
+<meta property="og:image" content="https://ooo.0x0.ooo/2025/03/22/OSLLXY.png">
 <meta property="article:published_time" content="2025-03-21T08:55:53.000Z">
-<meta property="article:modified_time" content="2025-03-21T15:19:22.539Z">
+<meta property="article:modified_time" content="2025-03-22T15:50:29.350Z">
 <meta property="article:author" content="mi1n9">
 <meta property="article:tag" content="blockchain">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ooo.0x0.ooo/2025/03/22/OSLRcx.png">
 
 
 <link rel="canonical" href="http://example.com/2025/03/21/solidity%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">
@@ -142,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%EF%BC%8C%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">一，前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%EF%BC%8C%E5%BC%80%E5%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">二，开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">三，数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%EF%BC%88bool%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">1. 布尔类型（bool）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">2. 整数类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9C%B0%E5%9D%80%E7%B1%BB%E5%9E%8B%EF%BC%88address%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">3. 地址类型（address）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9B%BA%E5%AE%9A%E5%A4%A7%E5%B0%8F%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%EF%BC%88bytes1-%E8%87%B3-bytes32%EF%BC%89"><span class="nav-number">3.4.</span> <span class="nav-text">4. 固定大小字节数组（bytes1 至 bytes32）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%8A%A8%E6%80%81%E5%A4%A7%E5%B0%8F%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%EF%BC%88bytes%EF%BC%89"><span class="nav-number">3.5.</span> <span class="nav-text">5. 动态大小字节数组（bytes）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%EF%BC%88string%EF%BC%89"><span class="nav-number">3.6.</span> <span class="nav-text">6. 字符串类型（string）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%9B%BA%E5%AE%9A%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%EF%BC%88fixed-ufixed%EF%BC%89"><span class="nav-number">3.7.</span> <span class="nav-text">7. 固定点数类型（fixed&#x2F;ufixed）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%EF%BC%88enum%EF%BC%89"><span class="nav-number">3.8.</span> <span class="nav-text">8. 枚举类型（enum）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%87%8D%E8%A6%81%E7%B1%BB%E5%9E%8B%EF%BC%88%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%EF%BC%89"><span class="nav-number">3.9.</span> <span class="nav-text">其他重要类型（补充说明）</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%EF%BC%8C%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">一，前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%EF%BC%8C%E5%BC%80%E5%A7%8B"><span class="nav-number">2.</span> <span class="nav-text">二，开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">三，数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%EF%BC%88bool%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">1. 布尔类型（bool）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">2. 整数类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9C%B0%E5%9D%80%E7%B1%BB%E5%9E%8B%EF%BC%88address%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">3. 地址类型（address）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9B%BA%E5%AE%9A%E5%A4%A7%E5%B0%8F%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%EF%BC%88bytes1-%E8%87%B3-bytes32%EF%BC%89"><span class="nav-number">3.4.</span> <span class="nav-text">4. 固定大小字节数组（bytes1 至 bytes32）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%8A%A8%E6%80%81%E5%A4%A7%E5%B0%8F%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%EF%BC%88bytes%EF%BC%89"><span class="nav-number">3.5.</span> <span class="nav-text">5. 动态大小字节数组（bytes）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B%EF%BC%88string%EF%BC%89"><span class="nav-number">3.6.</span> <span class="nav-text">6. 字符串类型（string）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%9B%BA%E5%AE%9A%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%EF%BC%88fixed-ufixed%EF%BC%89"><span class="nav-number">3.7.</span> <span class="nav-text">7. 固定点数类型（fixed&#x2F;ufixed）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%EF%BC%88enum%EF%BC%89"><span class="nav-number">3.8.</span> <span class="nav-text">8. 枚举类型（enum）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="nav-number">3.9.</span> <span class="nav-text">一些数据类型的默认值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%EF%BC%8C%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">四，函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%EF%BC%8C%E5%8F%AF%E8%A7%81%E5%BA%A6%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">5.</span> <span class="nav-text">五，可见度标识符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%EF%BC%8C%E7%8A%B6%E6%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">6.</span> <span class="nav-text">六，状态变量和局部变量</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -157,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -224,9 +228,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-03-21 16:55:53 / 修改时间：23:19:22" itemprop="dateCreated datePublished" datetime="2025-03-21T16:55:53+08:00">2025-03-21</time>
+      <time title="创建时间：2025-03-21 16:55:53" itemprop="dateCreated datePublished" datetime="2025-03-21T16:55:53+08:00">2025-03-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-22 23:50:29" itemprop="dateModified" datetime="2025-03-22T23:50:29+08:00">2025-03-22</time>
     </span>
 
   
@@ -243,14 +253,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>3.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -269,7 +279,7 @@
 <p>同时，在代码最上方，你可以加入SPDX-License-Identifier，最然这个是可选的，但是没有的话，有些编译器会出现警告。因为MIT是限制最少的License之一，我们会在大多数的代码中使用MIT协议。</p>
 <h1 id="二，开始"><a href="#二，开始" class="headerlink" title="二，开始"></a>二，开始</h1><p>接下来，我们输入contract，开始定义智能合约，contract是Solidity的关键字，它告诉编译器后面的代码是来定义智能合约的。</p>
 <p>就像这样。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.8</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract test&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.8</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract test&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="三，数据类型"><a href="#三，数据类型" class="headerlink" title="三，数据类型"></a>三，数据类型</h1><p>solidity中数据类型有八种。</p>
 <p>Solidity中的数据类型可以归纳为以下八种核心类型，每种类型的具体描述如下：</p>
@@ -278,7 +288,7 @@
 <li><p><strong>用途</strong>：表示逻辑值 <code>true</code> 或 <code>false</code>。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool isActive = true;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="variable">isActive</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="2-整数类型"><a href="#2-整数类型" class="headerlink" title="2. 整数类型"></a><strong>2. 整数类型</strong></h2><ul>
@@ -291,7 +301,7 @@
 <li><p><strong>用途</strong>：存储整数值，支持算术运算。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uint256 balance = 1000;</span><br><span class="line">int32 temperature = -5;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uint256</span> <span class="variable">balance</span> <span class="operator">=</span> <span class="number">1000</span>;</span><br><span class="line"><span class="type">int32</span> <span class="variable">temperature</span> <span class="operator">=</span> -<span class="number">5</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="3-地址类型（address）"><a href="#3-地址类型（address）" class="headerlink" title="3. 地址类型（address）"></a><strong>3. 地址类型（<code>address</code>）</strong></h2><ul>
@@ -302,28 +312,28 @@
 </ul>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">address user = 0x123...;</span><br><span class="line">address payable recipient = payable(user);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">address</span> <span class="variable">user</span> <span class="operator">=</span> <span class="number">0x123</span>...;</span><br><span class="line">address <span class="type">payable</span> <span class="variable">recipient</span> <span class="operator">=</span> payable(user);</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="4-固定大小字节数组（bytes1-至-bytes32）"><a href="#4-固定大小字节数组（bytes1-至-bytes32）" class="headerlink" title="4. 固定大小字节数组（bytes1 至 bytes32）"></a><strong>4. 固定大小字节数组（<code>bytes1</code> 至 <code>bytes32</code>）</strong></h2><ul>
 <li><p><strong>用途</strong>：存储固定长度的二进制数据（如哈希值）。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bytes32 hash = keccak256(abi.encodePacked(&quot;data&quot;));</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bytes32</span> <span class="variable">hash</span> <span class="operator">=</span> keccak256(abi.encodePacked(<span class="string">&quot;data&quot;</span>));</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="5-动态大小字节数组（bytes）"><a href="#5-动态大小字节数组（bytes）" class="headerlink" title="5. 动态大小字节数组（bytes）"></a><strong>5. 动态大小字节数组（<code>bytes</code>）</strong></h2><ul>
 <li><p><strong>用途</strong>：存储可变长度的二进制数据。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bytes data = hex&quot;00112233&quot;;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bytes</span> <span class="variable">data</span> <span class="operator">=</span> hex<span class="string">&quot;00112233&quot;</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="6-字符串类型（string）"><a href="#6-字符串类型（string）" class="headerlink" title="6. 字符串类型（string）"></a><strong>6. 字符串类型（<code>string</code>）</strong></h2><ul>
 <li><p><strong>用途</strong>：存储UTF-8编码的文本数据。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string greeting = &quot;Hello, World!&quot;;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">string</span> <span class="variable">greeting</span> <span class="operator">=</span> <span class="string">&quot;Hello, World!&quot;</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="7-固定点数类型（fixed-ufixed）"><a href="#7-固定点数类型（fixed-ufixed）" class="headerlink" title="7. 固定点数类型（fixed&#x2F;ufixed）"></a><strong>7. 固定点数类型（<code>fixed</code>&#x2F;<code>ufixed</code>）</strong></h2><ul>
@@ -336,23 +346,38 @@
 <li><p><strong>用途</strong>：高精度小数计算（实际使用较少）。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufixed128x18 price = 3.1415;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ufixed128x18</span> <span class="variable">price</span> <span class="operator">=</span> <span class="number">3.1415</span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
 <h2 id="8-枚举类型（enum）"><a href="#8-枚举类型（enum）" class="headerlink" title="8. 枚举类型（enum）"></a><strong>8. 枚举类型（<code>enum</code>）</strong></h2><ul>
 <li><p><strong>用途</strong>：定义一组命名的常量值。</p>
 </li>
 <li><p><strong>示例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum Status &#123; Pending, Approved, Rejected &#125;</span><br><span class="line">Status public currentStatus = Status.Pending;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Status</span> &#123; Pending, Approved, Rejected &#125;</span><br><span class="line">Status <span class="type">public</span> <span class="variable">currentStatus</span> <span class="operator">=</span> Status.Pending;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <hr>
-<h2 id="其他重要类型（补充说明）"><a href="#其他重要类型（补充说明）" class="headerlink" title="其他重要类型（补充说明）"></a><strong>其他重要类型（补充说明）</strong></h2><p>虽然未在上述八种核心类型中，但以下类型在Solidity中也很重要：</p>
-<ul>
-<li><strong>数组</strong>：<code>T[]</code>（动态数组）或 <code>T[5]</code>（固定数组）。</li>
-<li><strong>结构体（<code>struct</code>）</strong>：用户自定义的复合数据类型。</li>
-<li><strong>映射（<code>mapping</code>）</strong>：键值对存储，如 <code>mapping(address =&gt; uint) balances</code>。</li>
-<li><strong>函数类型（<code>function</code>）</strong>：表示可调用的函数。</li>
-</ul>
+<h2 id="一些数据类型的默认值"><a href="#一些数据类型的默认值" class="headerlink" title="一些数据类型的默认值"></a>一些数据类型的默认值</h2><p>定义一个变量时，无论是局部变量还是状态变量(全局变量)，都有自己的默认值，不同的是局部变量在声明时不会自动被赋予默认值，而是由开发者手动初始化。而状态变量在合约部署时会被自动赋予默认值。我们如果要部署后看到其默认值，就需要定义变量时加上public，例如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.8</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract test&#123;</span><br><span class="line">    uint <span class="keyword">public</span> myuint;</span><br><span class="line">    bool <span class="keyword">public</span> myBool;        </span><br><span class="line">    address <span class="keyword">public</span> myAddress;  </span><br><span class="line">    string <span class="keyword">public</span> myString;    </span><br><span class="line">    uint[] <span class="keyword">public</span> myArray;     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译部署后，我们就可以看到各自的默认值。</p>
+<p><img src="https://ooo.0x0.ooo/2025/03/22/OSLRcx.png" alt="OSLRcx.png"></p>
+<h1 id="四，函数"><a href="#四，函数" class="headerlink" title="四，函数"></a>四，函数</h1><p>在solidity中，函数用function进行表示。举个栗子。我们定义一个catch函数。这个函数会把number改成一个新的值，要改变的数字，是传给catch函数的参数，所以我们定义catch函数，接受uint256的参数，参数名字是cnumber，定义为public函数，然后在函数中，我们将favoriteNumber赋值为传入的参数。</p>
+<p>就像这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.8</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract test&#123;</span><br><span class="line">    uint256 number;</span><br><span class="line">    function <span class="title function_">cat</span><span class="params">(uint256 cnumber)</span> <span class="keyword">public</span> &#123;</span><br><span class="line">        number=cnumber;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不过有一点注意一下，自己定义函数时要注意避免使用solidity的保留字，比如abstract，catch，try，receive，fallback，interface，library，override 等。此时我们编译后部署就可以看到</p>
+<p><img src="https://ooo.0x0.ooo/2025/03/22/OSL4Mj.png" alt="OSL4Mj.png"></p>
+<p>我们在右边的框内输入数字就可以传到number里，但是我们在更改传入的数字时是看不到number值的变化的，这个时候就要引入可见度标识符的概念。</p>
+<h1 id="五，可见度标识符"><a href="#五，可见度标识符" class="headerlink" title="五，可见度标识符"></a>五，可见度标识符</h1><p>函数和变量有四种可见度标识符public、private、internal和external。</p>
+<p>public：public 是最高级别的可见度标识符，表示变量、函数或合约对内外部都可见。公共状态变量可以被任何人读取，并且公共函数可以被外部调用者调用。公共函数和状态变量的访问可以通过合约地址直接进行。<br>private：private 是最低级别的可见度标识符，表示只有当前合约内的其他函数才能访问该变量或函数。私有状态变量只能在当前合约中访问，私有函数只能被当前合约的其他函数调用。私有状态变量和函数对外部调用者是不可见的。<br>internal：internal 表示内部可见性，表示只有当前合约及其派生合约内的其他函数才能访问该变量或函数。内部状态变量和函数可以在当前合约及其派生合约中访问，但对外部调用者不可见。<br>external：external 可以用于函数，表示该函数只能通过外部消息调用。外部函数只能被其他合约调用，而不能在当前合约内部直接调用。此外，外部函数不能访问合约的状态变量，只能通过参数和返回值进行数据交互。<br>如果没有显式指定变量的访问修饰符，则默认为internal，而internal关键字表示，它只对本合约和继承合约可见。</p>
+<p>现在这个number变量被设置为了internal，所以我们看不到它。</p>
+<p>为了让我们看到它，我们需要更改其可见度。现在把它设置为public重新编译。</p>
+<p>如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.8</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract test&#123;</span><br><span class="line">    uint256 <span class="keyword">public</span> number;</span><br><span class="line">    function <span class="title function_">cat</span><span class="params">(uint256 cnumber)</span> <span class="keyword">public</span> &#123;</span><br><span class="line">        number=cnumber;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>部署后就可以点number查看变量的值了。</p>
+<p><img src="https://ooo.0x0.ooo/2025/03/22/OSLLXY.png" alt="OSLLXY.png"></p>
+<h1 id="六，状态变量和局部变量"><a href="#六，状态变量和局部变量" class="headerlink" title="六，状态变量和局部变量"></a>六，状态变量和局部变量</h1><p>感觉就是全局变量和局部变量，函数外面的是全局变量（状态变量），函数里面的是局部变量。</p>
 
     </div>
 
@@ -374,6 +399,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/03/23/2025%E7%BA%A2%E6%98%8E%E8%B0%B7/" rel="next" title="2025红明谷">
+                  2025红明谷 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -404,13 +432,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">257k</span>
+    <span title="站点总字数">269k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:48</span>
+    <span title="站点阅读时长">8:10</span>
   </span>
 </div>
 <div class="busuanzi-count">
