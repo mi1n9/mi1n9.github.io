@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Rabin攻击">
+    <meta name="description" content="持续更新ing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相关数学基础知识">
-<meta property="og:url" content="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:title" content="Ethernaut靶场刷题记录">
+<meta property="og:url" content="http://example.com/2025/04/01/Ethernaut%E9%9D%B6%E5%9C%BA%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="浮白载笔">
-<meta property="og:description" content="Rabin攻击">
+<meta property="og:description" content="持续更新ing">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-25T11:13:26.000Z">
-<meta property="article:modified_time" content="2024-10-29T17:06:55.448Z">
+<meta property="article:published_time" content="2025-04-01T15:18:25.000Z">
+<meta property="article:modified_time" content="2025-04-07T02:50:56.879Z">
 <meta property="article:author" content="mi1n9">
-<meta property="article:tag" content="NOTE">
+<meta property="article:tag" content="blockchain">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+<link rel="canonical" href="http://example.com/2025/04/01/Ethernaut%E9%9D%B6%E5%9C%BA%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/","path":"2024/03/25/相关数学基础知识/","title":"相关数学基础知识"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/04/01/Ethernaut%E9%9D%B6%E5%9C%BA%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/","path":"2025/04/01/Ethernaut靶场刷题记录/","title":"Ethernaut靶场刷题记录"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>相关数学基础知识 | 浮白载笔</title>
+<title>Ethernaut靶场刷题记录 | 浮白载笔</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Rabin%E6%94%BB%E5%87%BB"><span class="nav-number">1.</span> <span class="nav-text">Rabin攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86"><span class="nav-number">1.1.</span> <span class="nav-text">费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-number">1.1.2.</span> <span class="nav-text">证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99"><span class="nav-number">1.2.</span> <span class="nav-text">二次剩余</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%EF%BC%8CHello-Ethernaut"><span class="nav-number">1.</span> <span class="nav-text">1，Hello Ethernaut</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%EF%BC%8CFallback"><span class="nav-number">2.</span> <span class="nav-text">2，Fallback</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,7 +196,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/25/%E7%9B%B8%E5%85%B3%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/01/Ethernaut%E9%9D%B6%E5%9C%BA%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Image_1710243749806.jpg">
@@ -209,12 +209,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="相关数学基础知识 | 浮白载笔">
+      <meta itemprop="name" content="Ethernaut靶场刷题记录 | 浮白载笔">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          相关数学基础知识
+          Ethernaut靶场刷题记录
         </h1>
 
         <div class="post-meta-container">
@@ -225,14 +225,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-03-25 19:13:26" itemprop="dateCreated datePublished" datetime="2024-03-25T19:13:26+08:00">2024-03-25</time>
+      <time title="创建时间：2025-04-01 23:18:25" itemprop="dateCreated datePublished" datetime="2025-04-01T23:18:25+08:00">2025-04-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-30 01:06:55" itemprop="dateModified" datetime="2024-10-30T01:06:55+08:00">2024-10-30</time>
+      <time title="修改时间：2025-04-07 10:50:56" itemprop="dateModified" datetime="2025-04-07T10:50:56+08:00">2025-04-07</time>
     </span>
 
   
@@ -249,14 +249,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>230</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -266,16 +266,24 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Rabin攻击"><a href="#Rabin攻击" class="headerlink" title="Rabin攻击"></a>Rabin攻击</h1><span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><p>持续更新ing</p>
+<span id="more"></span>
 
-<p>首先引出二次剩余和欧拉准则，欧拉准则的证明又设计涉及费马小定理，下面一一说明。</p>
-<h2 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>若p为素数，gcd(a,p)&#x3D;1,则$a^{p}$≡a(modp),也可写为$a^{p-1}$≡1(modp).</p>
-<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><h2 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><ul>
-<li><p>若<em>p</em>是素数,a<em>不是p</em>的倍数且与一个平方数模p<em>同余,则称a</em>是模p<em>的二次剩余,记作</em>a<em>∈</em>QR</p>
-<p>例如$2^{2}$≡4(mod13) 则称4是模13的二次剩余</p>
-<p>同样我们把不等于0也不是模p<em>的二次剩余的数称为非二次剩余,记作a</em>∈<em>NR</em></p>
-</li>
-</ul>
+<h1 id="1，Hello-Ethernaut"><a href="#1，Hello-Ethernaut" class="headerlink" title="1，Hello Ethernaut"></a>1，Hello Ethernaut</h1><p>跟着提示输入就行，这一节只是简单教你如何在Ethernaut网站使用控制台和合约进行交互，包括查看合约详情信息、调用合约内方法等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">contract.<span class="title function_">info</span>()</span><br><span class="line"><span class="comment">// &quot;You will find what you need in info1().&quot;</span></span><br><span class="line">contract.<span class="title function_">info1</span>()</span><br><span class="line"><span class="comment">// &quot;Try info2(), but with &quot;hello&quot; as a parameter.&quot;</span></span><br><span class="line">contract.<span class="title function_">info2</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="comment">// &quot;The property infoNum holds the number of the next info method to call.&quot;</span></span><br><span class="line">contract.<span class="title function_">infoNum</span>()</span><br><span class="line"><span class="comment">// 42</span></span><br><span class="line">contract.<span class="title function_">info42</span>()</span><br><span class="line"><span class="comment">// &quot;theMethodName is the name of the next method.&quot;</span></span><br><span class="line">contract.<span class="title function_">theMethodName</span>()</span><br><span class="line"><span class="comment">// &quot;The method name is method7123949.&quot;</span></span><br><span class="line">contract.<span class="title function_">method7123949</span>()</span><br><span class="line"><span class="comment">// &quot;If you know the password, submit it to authenticate().&quot;</span></span><br><span class="line">contract.<span class="title function_">password</span>()</span><br><span class="line"><span class="comment">// &quot;ethernaut0&quot;</span></span><br><span class="line">contract.<span class="title function_">authenticate</span>(<span class="string">&#x27;ethernaut0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="2，Fallback"><a href="#2，Fallback" class="headerlink" title="2，Fallback"></a>2，Fallback</h1><p>先来看给出的合约代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: MIT</span></span><br><span class="line">pragma solidity ^<span class="number">0.6</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@openzeppelin/contracts/math/SafeMath.sol&#x27;</span>;</span><br><span class="line"></span><br><span class="line">contract Fallback &#123;</span><br><span class="line"></span><br><span class="line">  using SafeMath <span class="keyword">for</span> uint256;</span><br><span class="line">  mapping(address =&gt; uint) <span class="keyword">public</span> contributions;</span><br><span class="line">  address payable <span class="keyword">public</span> owner;</span><br><span class="line"></span><br><span class="line">  constructor() <span class="keyword">public</span> &#123;</span><br><span class="line">    owner = msg.sender;</span><br><span class="line">    contributions[msg.sender] = <span class="number">1000</span> * (<span class="number">1</span> ether);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  modifier onlyOwner &#123;</span><br><span class="line">        require(</span><br><span class="line">            msg.sender == owner,</span><br><span class="line">            <span class="string">&quot;caller is not the owner&quot;</span></span><br><span class="line">        );</span><br><span class="line">        _;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  function <span class="title function_">contribute</span><span class="params">()</span> <span class="keyword">public</span> payable &#123;</span><br><span class="line">    require(msg.value &lt; <span class="number">0.001</span> ether);</span><br><span class="line">    contributions[msg.sender] += msg.value;</span><br><span class="line">    <span class="keyword">if</span>(contributions[msg.sender] &gt; contributions[owner]) &#123;</span><br><span class="line">      owner = msg.sender;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function <span class="title function_">getContribution</span><span class="params">()</span> <span class="keyword">public</span> view <span class="title function_">returns</span> <span class="params">(uint)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> contributions[msg.sender];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  function <span class="title function_">withdraw</span><span class="params">()</span> <span class="keyword">public</span> onlyOwner &#123;</span><br><span class="line">    owner.transfer(address(<span class="built_in">this</span>).balance);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  receive() external payable &#123;</span><br><span class="line">    require(msg.value &gt; <span class="number">0</span> &amp;&amp; contributions[msg.sender] &gt; <span class="number">0</span>);</span><br><span class="line">    owner = msg.sender;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>题目是fallback，那么啥是fallback呢，就是当其他合约调用该合约切该合约不存在相应函数就会触发fallback，fallback功能由合约所有者自定义。</p>
+<p>简单分析合约：</p>
+<p>令合约创建者为owner，其贡献值为1000eth；</p>
+<p>contribute方法要求发送的ether不超过0.001eth，然后记录发送者贡献；</p>
+<p>onlyOwner修改器要求交易发送者必须为owner；</p>
+<p>withdraw方法由onlyOwner修改器控制，内容为取走合约内所有ether；</p>
+<p>最下面的receive是如果交易发送者贡献大于0且向合约发送的eth大于0，则owner易主，变为交易发送者</p>
+<p>这里涉及到更改owner的地方只有2处，首先是contribute函数，可以观察到他的条件很难触发，要我们的eth大于合约所有者的eth，但是合约所有者的eth在最开始就有1000，所以这是很难做到的。</p>
+<p>再来看下面这个receive函数，有人向合约发送一些以太坊而没有在交易的 “数据”字段中指定任何东西时，receive 就会被 自动调用。那么receive就是接收到外部转账的时候会调用这个方法并执行里面的内容。那么思路已经很清晰了。首先调用contribute函数传一个小于0.001eth，这样发送者就会存在贡献，然后从外部向合约发送eth触发receive函数，使我们自己变为owner，在withdraw提取所有eth即可。这里提供两种解题方法。</p>
 
     </div>
 
@@ -285,21 +293,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/NOTE/" rel="tag"># NOTE</a>
+              <a href="/tags/blockchain/" rel="tag"># blockchain</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/14/2024BeginCTF-Crypto-fake-N/" rel="prev" title="2024BeginCTF Crypto--fake_N">
-                  <i class="fa fa-angle-left"></i> 2024BeginCTF Crypto--fake_N
+                <a href="/2025/03/31/%E4%B8%8D%E7%BB%8F%E6%84%8F%E4%BC%A0%E8%BE%93/" rel="prev" title="不经意传输">
+                  <i class="fa fa-angle-left"></i> 不经意传输
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/04/28/XYCTF-crypto/" rel="next" title="XYCTF-crypto">
-                  XYCTF-crypto <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -401,7 +406,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
