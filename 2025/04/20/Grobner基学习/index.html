@@ -19,16 +19,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="qaq 大概看了一下，发现自己还是有很多前置知识没解锁，所以暂时先把Gröbner基当做一个求解同余方程组的工具。 Grobner基求的是多元多项式的“最大公约数”。特别地，如果这些多元多项式都有共同的根的话，就可以利用Grobner基来求出这些根。 一般使用sage自带的Ideal.groebner_basis()来求解Grobner基。 举个栗子12345678910111213from Cr">
+    <meta name="description" content="qaq 大概看了一下，发现自己还是有很多前置知识没解锁，所以暂时先把Gröbner基当做一个求解同余方程组的工具。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gröbner基学习">
 <meta property="og:url" content="http://example.com/2025/04/20/Grobner%E5%9F%BA%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="浮白载笔">
-<meta property="og:description" content="qaq 大概看了一下，发现自己还是有很多前置知识没解锁，所以暂时先把Gröbner基当做一个求解同余方程组的工具。 Grobner基求的是多元多项式的“最大公约数”。特别地，如果这些多元多项式都有共同的根的话，就可以利用Grobner基来求出这些根。 一般使用sage自带的Ideal.groebner_basis()来求解Grobner基。 举个栗子12345678910111213from Cr">
+<meta property="og:description" content="qaq 大概看了一下，发现自己还是有很多前置知识没解锁，所以暂时先把Gröbner基当做一个求解同余方程组的工具。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ooo.0x0.ooo/2025/04/20/OcWtcU.png">
 <meta property="article:published_time" content="2025-04-20T08:12:20.000Z">
-<meta property="article:modified_time" content="2025-04-24T14:18:39.969Z">
+<meta property="article:modified_time" content="2025-04-24T14:22:54.193Z">
 <meta property="article:author" content="mi1n9">
 <meta property="article:tag" content="NOTE">
 <meta name="twitter:card" content="summary">
@@ -234,7 +234,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-04-24 22:18:39" itemprop="dateModified" datetime="2025-04-24T22:18:39+08:00">2025-04-24</time>
+      <time title="修改时间：2025-04-24 22:22:54" itemprop="dateModified" datetime="2025-04-24T22:22:54+08:00">2025-04-24</time>
     </span>
 
   
@@ -270,6 +270,8 @@
     
     <div class="post-body" itemprop="articleBody"><p>qaq</p>
 <p>大概看了一下，发现自己还是有很多前置知识没解锁，所以暂时先把Gröbner基当做一个求解同余方程组的工具。</p>
+<span id="more"></span>
+
 <p>Grobner基求的是多元多项式的“最大公约数”。特别地，如果这些多元多项式都有共同的根的话，就可以利用Grobner基来求出这些根。</p>
 <p>一般使用sage自带的Ideal.groebner_basis()来求解Grobner基。</p>
 <h1 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">p, q = getPrime(<span class="number">256</span>), getPrime(<span class="number">256</span>)</span><br><span class="line">N = p * q</span><br><span class="line">m1 = bytes_to_long(<span class="string">b&quot;flag&#123;12345678901234567890&quot;</span>)</span><br><span class="line">m2 = bytes_to_long(<span class="string">b&quot;1234567890123456789012345&quot;</span>)</span><br><span class="line">m3 = bytes_to_long(<span class="string">b&quot;6789012345678901234567890&#125;&quot;</span>)</span><br><span class="line">e = <span class="number">17</span></span><br><span class="line">c1 = <span class="built_in">pow</span>(m1, e, N)</span><br><span class="line">c2 = <span class="built_in">pow</span>(m2, e, N)</span><br><span class="line">c3 = <span class="built_in">pow</span>(m3, e, N)</span><br><span class="line">s = m1 + m2 + m3</span><br><span class="line"><span class="built_in">print</span>(c1, c2, c3, s)</span><br></pre></td></tr></table></figure>
