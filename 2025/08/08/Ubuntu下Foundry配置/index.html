@@ -19,25 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="夜将寒色去，年共晓光新">
-<meta property="og:type" content="website">
-<meta property="og:title" content="浮白载笔">
-<meta property="og:url" content="http://example.com/archives/2025/index.html">
+    <meta name="description" content="owo 记录一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu下Foundry配置">
+<meta property="og:url" content="http://example.com/2025/08/08/Ubuntu%E4%B8%8BFoundry%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="浮白载笔">
-<meta property="og:description" content="夜将寒色去，年共晓光新">
+<meta property="og:description" content="owo 记录一下">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-08T12:28:51.000Z">
+<meta property="article:modified_time" content="2025-08-08T12:57:08.685Z">
 <meta property="article:author" content="mi1n9">
+<meta property="article:tag" content="NOTES">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/2025/">
+<link rel="canonical" href="http://example.com/2025/08/08/Ubuntu%E4%B8%8BFoundry%E9%85%8D%E7%BD%AE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2025/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/08/08/Ubuntu%E4%B8%8BFoundry%E9%85%8D%E7%BD%AE/","path":"2025/08/08/Ubuntu下Foundry配置/","title":"Ubuntu下Foundry配置"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 浮白载笔</title>
+<title>Ubuntu下Foundry配置 | 浮白载笔</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -72,7 +75,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">浮白载笔</h1>
+      <p class="site-title">浮白载笔</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">苍山负雪，明烛天南</p>
@@ -126,7 +129,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -139,6 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Rustup%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">Rustup配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Foundryup%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Foundryup安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B8%A9%E5%9D%91"><span class="nav-number">2.1.</span> <span class="nav-text">踩坑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">3.</span> <span class="nav-text">创建项目</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,232 +185,138 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 26 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/08/Ubuntu%E4%B8%8BFoundry%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://q.qlogo.cn/headimg_dl?dst_uin=2605742754&spec=640&img_type=jpg">
+      <meta itemprop="name" content="mi1n9">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浮白载笔">
+      <meta itemprop="description" content="夜将寒色去，年共晓光新">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Ubuntu下Foundry配置 | 浮白载笔">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ubuntu下Foundry配置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+
+      <time title="创建时间：2025-08-08 20:28:51 / 修改时间：20:57:08" itemprop="dateCreated datePublished" datetime="2025-08-08T20:28:51+08:00">2025-08-08</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>891</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>owo</p>
+<p>记录一下</p>
+<span id="more"></span>
+
+<p>准备继续学习区块链的一些知识了，先配置一下Foundry</p>
+<h1 id="Rustup配置"><a href="#Rustup配置" class="headerlink" title="Rustup配置"></a>Rustup配置</h1><p>首先要给Linux里装一个Rust，因为Foundry是基于Rust的，直接按官网来搞就行<a target="_blank" rel="noopener" href="https://rustup.rs/">rustup.rs - The Rust toolchain installer</a>，不过记得要换源不然巨慢无比</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">echo &#x27;export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line">echo &#x27;export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup&#x27; &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<h1 id="Foundryup安装"><a href="#Foundryup安装" class="headerlink" title="Foundryup安装"></a>Foundryup安装</h1><p>然后使用以下命令安装Foundryup</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://foundry.paradigm.xyz | bash</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>安装完成之后直接在控制台输入foundryup就可以了，会提醒你更换路径或者重新打开一个终端运行foundryup</p>
+<h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><p>首先是网络的问题，安装Foundryup的时候突然发现右上角网络图标没了。</p>
+<p>服务的名字变更为了NetworkManager，所以需要改一下</p>
+<p>依次运行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service NetworkManager stop</span><br><span class="line">sudo rm /var/lib/NetworkManager/NetworkManager.state</span><br><span class="line">sudo service NetworkManager start</span><br></pre></td></tr></table></figure>
+
+<p>然后在控制台输入foundryup的时候显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Failed connect to github.com:443; Connection refused</span><br></pre></td></tr></table></figure>
+
+<p>最开始以为是网络的问题，结果改了一通还是连不上，然后ping 了一下github发现ping到127.0.0.1了，绷不住了。显然是本地DNS的问题了。</p>
+<p>执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>在里面加上140.82.112.4 github.com 即可。</p>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>最后 forge init即可。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-08-08T20:28:51+08:00"
-              content="2025-08-08">
-          08-08
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/08/08/Ubuntu%E4%B8%8BFoundry%E9%85%8D%E7%BD%AE/" itemprop="url">
-          <span itemprop="name">Ubuntu下Foundry配置</span>
-        </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/NOTES/" rel="tag"># NOTES</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/02/NepCTF2025/" rel="prev" title="NepCTF2025">
+                  <i class="fa fa-angle-left"></i> NepCTF2025
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-08-02T12:13:04+08:00"
-              content="2025-08-02">
-          08-02
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/08/02/NepCTF2025/" itemprop="url">
-          <span itemprop="name">NepCTF2025</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-07-16T16:07:27+08:00"
-              content="2025-07-16">
-          07-16
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/07/16/2025CryptoCTF/" itemprop="url">
-          <span itemprop="name">2025CryptoCTF</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-05-27T20:46:06+08:00"
-              content="2025-05-27">
-          05-27
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/05/27/%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%BB%84%E6%B2%B3%E6%B5%81%E5%9F%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E8%83%BD%E6%8C%91%E6%88%98%E8%B5%9B/" itemprop="url">
-          <span itemprop="name">第三届黄河流域网络安全技能挑战赛</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-05-11T15:19:31+08:00"
-              content="2025-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/05/11/2025miniLCTF/" itemprop="url">
-          <span itemprop="name">2025miniLCTF</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-04-29T08:46:26+08:00"
-              content="2025-04-29">
-          04-29
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/04/29/ACTF2025%E5%A4%8D%E7%8E%B0/" itemprop="url">
-          <span itemprop="name">ACTF2025复现</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-04-20T16:12:20+08:00"
-              content="2025-04-20">
-          04-20
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/04/20/Grobner%E5%9F%BA%E5%AD%A6%E4%B9%A0/" itemprop="url">
-          <span itemprop="name">Gröbner基学习</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-04-13T17:39:45+08:00"
-              content="2025-04-13">
-          04-13
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/04/13/TGCTF/" itemprop="url">
-          <span itemprop="name">TGCTF</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-04-11T16:38:21+08:00"
-              content="2025-04-11">
-          04-11
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/04/11/MT19937/" itemprop="url">
-          <span itemprop="name">MT19937</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-04-07T20:27:57+08:00"
-              content="2025-04-07">
-          04-07
-        </time>
-      </div>
-
-      <div class="post-title">
-        <a class="post-title-link" href="/2025/04/07/XYCTF2025/" itemprop="url">
-          <span itemprop="name">XYCTF2025</span>
-        </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2025/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/archives/2025/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+
+
+
 
 </div>
   </main>
